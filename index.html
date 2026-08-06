@@ -1,0 +1,813 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Professional Physiotherapy Services. We offer specialized treatments including orthopaedic rehab, sports injury recovery, manual therapy, and women's health.">
+  <title>Our Services | Professional Physiotherapy Clinic</title>
+  <link rel="icon" type="image/png" href="LOGO/favicon.png">
+
+  <style>
+    /* ============================================================
+       1. CSS VARIABLES & RESET
+    ============================================================ */
+    :root {
+      --primary:    #006064; 
+      --secondary:  #00acc1;
+      --accent:     #ffb300;
+      --dark:       #212121;
+      --text:       #424242;
+      --muted:      #757575;
+      --bg:         #f7f9fa;
+      --white:      #ffffff;
+      --radius:     12px;
+      --shadow:     0 8px 30px rgba(0,0,0,.08);
+      --trans:      all 0.3s ease;
+    }
+
+    *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+    html { scroll-behavior: smooth; font-size: 16px; overflow-x: hidden; }
+    body { font-family: 'Segoe UI', system-ui, sans-serif; color: var(--text); line-height: 1.6; background-color: var(--bg); overflow-x: hidden; width: 100%; }
+    a { text-decoration: none; color: inherit; }
+    ul { list-style: none; }
+    img { max-width: 100%; display: block; height: auto; }
+    button { cursor: pointer; font-family: inherit; border: none; }
+
+    .container {
+      width: 100%;
+      max-width: none;
+      margin: 0 auto;
+      padding: 0 20px;
+    }
+
+    body.menu-open {
+      overflow: hidden;
+      height: 100vh;
+    }
+
+    /* ============================================================
+       2. HEADER & NAVIGATION
+    ============================================================ */
+    .main-header {
+      background: linear-gradient(135deg, #2778b7 0%, #a8d339 100%);
+      box-shadow: 0 2px 15px rgba(0,0,0,.05);
+      position: sticky;
+      top: 0;
+      z-index: 900;
+      width: 100%;
+    }
+
+    .header-inner {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      min-height: 100px;
+      padding: 10px 10px;
+    }
+
+    .logo {
+      display: flex;
+      align-items: center;
+      flex-shrink: 0;
+      max-width: 60%;
+    }
+
+    .logo img {
+      max-height: 90px;
+      width: auto;
+      object-fit: contain;
+      filter: 
+        drop-shadow(1px 0px 0px #ffffff) 
+        drop-shadow(-1px 0px 0px #ffffff) 
+        drop-shadow(0px 1px 0px #ffffff) 
+        drop-shadow(0px -1px 0px #ffffff) 
+        drop-shadow(1px 1px 0px #ffffff) 
+        drop-shadow(-1px -1px 0px #ffffff) 
+        drop-shadow(1px -1px 0px #ffffff) 
+        drop-shadow(-1px 1px 0px #ffffff)
+        drop-shadow(0px 0px 2px #ffffff);
+    }
+
+    .nav-wrapper {
+      flex: 1;
+      display: flex;
+      justify-content: flex-end;
+    }
+
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 32px;
+    }
+
+    .nav-links a {
+      font-weight: 600;
+      font-size: 17px;
+      color: #0e428c;
+      position: relative;
+      padding: 8px 0;
+      transition: color .3s;
+      font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    }
+
+    .nav-links a:hover, .nav-links a.active {
+      color: #ffffff;
+    }
+
+    /* Hamburger */
+    .hamburger {
+      display: none;
+      flex-direction: column;
+      gap: 6px;
+      background: none;
+      padding: 8px;
+      z-index: 910;
+    }
+    .hamburger span {
+      display: block;
+      width: 26px;
+      height: 2px;
+      background: var(--dark);
+      border-radius: 2px;
+      transition: var(--trans);
+    }
+    .hamburger.open span:nth-child(1) { transform: translateY(8px) rotate(45deg); }
+    .hamburger.open span:nth-child(2) { opacity: 0; }
+    .hamburger.open span:nth-child(3) { transform: translateY(-8px) rotate(-45deg); }
+
+    /* Header Responsive Breakpoint */
+    @media (max-width: 900px) {
+      .header-inner {
+        height: 90px;
+      }
+      .logo img {
+        height: 90px;
+      }
+      .nav-wrapper { justify-content: flex-end; }
+      .hamburger { display: flex; margin-left: 15px; }
+      
+      .nav-links {
+        position: fixed;
+        top: 80px;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        height: calc(100vh - 80px);
+        background: var(--white);
+        flex-direction: column;
+        align-items: center;
+        justify-content: flex-start;
+        gap: 0;
+        padding: 30px 0;
+        box-shadow: 0 8px 24px rgba(0,0,0,.1);
+        z-index: 995;
+        
+        opacity: 0;
+        visibility: hidden;
+        transition: opacity 0.3s ease, visibility 0.3s ease;
+      }
+
+      .nav-links.open {
+        opacity: 1;
+        visibility: visible;
+      }
+
+      .nav-links a {
+        display: block;
+        width: 100%;
+        text-align: center;
+        padding: 16px 20px;
+        border-bottom: 1px solid #eee;
+      }
+    }
+
+    /* ============================================================
+       3. HERO / WELCOME SECTION
+    ============================================================ */
+    .hero {
+      background: linear-gradient(135deg, #2778b7 0%, #a8d339 100%), url('assets/hero-bg.jpg') center/cover no-repeat;
+      color: var(--white);
+      padding: clamp(40px, 8vw, 50px) 0 40px 0;
+      text-align: center;
+      width: 100%;
+    }
+
+    .hero h1 {
+      font-size: clamp(28px, 6vw, 40px);
+      font-weight: 800;
+      margin-bottom: 24px;
+      letter-spacing: -0.5px;
+      line-height: 1.2;
+    }
+
+    .hero-content {
+      font-family: Georgia, 'Times New Roman', Times, serif;
+      margin: 0 auto;
+      font-size: clamp(15px, 2vw, 18px);
+      line-height: 1.8;
+      color: rgba(255, 255, 255, 0.95);
+      padding: 0 10px;
+    }
+
+    /* ============================================================
+       4. SERVICES SECTION (ZIGZAG LAYOUT)
+    ============================================================ */
+    .services-section {
+      padding: 40px 0 clamp(60px, 10vw, 100px) 0;
+      background: var(--white);
+    }
+
+    .section-title {
+      text-align: center;
+      font-size: clamp(28px, 4vw, 40px);
+      color: #0e428c;
+      margin-bottom: clamp(40px, 8vw, 60px);
+      position: relative;
+      font-family: Georgia, 'Times New Roman', Times, serif;
+    }
+
+    .section-title::after {
+      content: '';
+      display: block;
+      width: min(300px, 80%);
+      height: 4px;
+      background: #76b239;
+      margin: 10px auto 0;
+      border-radius: 2px;
+    }
+
+    .service-row {
+      display: flex;
+      align-items: center;
+      gap: clamp(30px, 5vw, 80px);
+      margin-bottom: clamp(50px, 8vw, 100px);
+    }
+
+    .service-row:nth-child(even) {
+      flex-direction: row-reverse;
+    }
+
+    .service-image {
+      flex: 1;
+      position: relative;
+      width: 100%;
+    }
+
+    .service-image img {
+      width: 100%;
+      height: clamp(250px, 40vw, 400px);
+      object-fit: cover;
+      border-radius: var(--radius);
+      box-shadow: var(--shadow);
+      transition: transform 0.4s ease;
+    }
+
+    .service-image:hover img {
+      transform: translateY(-5px);
+    }
+
+    .service-image::before {
+      content: '';
+      position: absolute;
+      top: -20px;
+      bottom: -20px;
+      left: -20px;
+      right: -20px;
+      background: var(--bg);
+      border-radius: var(--radius);
+      z-index: -1;
+      transform: scale(0.95);
+      transition: transform 0.4s ease;
+    }
+
+    .service-row:nth-child(odd) .service-image::before { right: 20px; left: -20px; }
+    .service-row:nth-child(even) .service-image::before { left: 20px; right: -20px; }
+    .service-image:hover::before { transform: scale(1); background: #e0f7fa; }
+
+    .service-content {
+      flex: 1;
+      width: 100%;
+    }
+
+    .service-content h3 {
+      font-size: clamp(22px, 3vw, 32px);
+      color: #76b239;
+      margin-bottom: 20px;
+      font-weight: 700;
+      font-family: Georgia, 'Times New Roman', Times, serif;
+    }
+
+    .service-content p {
+      font-size: clamp(16px, 2vw, 18px);
+      font-family: Georgia, 'Times New Roman', Times, serif;
+      color: #3a3a3a;
+      margin-bottom: 24px;
+    }
+
+    .service-list {
+      margin-top: 20px;
+    }
+
+    .service-list li {
+      display: flex;
+      align-items: flex-start;
+      gap: 12px;
+      margin-bottom: 16px;
+      font-size: clamp(16px, 2vw, 18px);
+      font-family: Georgia, 'Times New Roman', Times, serif;
+      color: #3a3a3a;
+    }
+
+    .service-list li::before {
+      content: '✔';
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 24px;
+      height: 24px;
+      background: #0e428c;
+      color: white;
+      border-radius: 50%;
+      font-size: 12px;
+      flex-shrink: 0;
+      margin-top: 2px;
+    }
+
+    @media (max-width: 900px) {
+      .service-row, .service-row:nth-child(even) {
+        flex-direction: column;
+        text-align: left;
+      }
+      .service-image { width: 100%; margin-bottom: 20px; }
+      .service-image::before { display: none; }
+      .service-image img { height: 300px; width: 100%; }
+      .service-list li { text-align: left; }
+    }
+
+    @media (max-width: 480px) {
+      .service-image img { height: 220px; }
+    }
+
+    /* ============================================================
+       5. FOOTER
+    ============================================================ */
+    .footer {
+      background: linear-gradient(135deg, #2778b7 0%, #a8d339 100%);
+      color: var(--text);
+      padding: clamp(50px, 8vw, 80px) 0 20px;
+      border-top: 1px solid #e0e0e0;
+      overflow: hidden;
+      color: #ffffff;
+    }
+
+    .footer-grid {
+      display: grid;
+      grid-template-columns: 2fr 1fr 1fr 1fr;
+      gap: 40px;
+      margin-bottom: 40px;
+    }
+
+    .footer-logo {
+      margin-bottom: 20px;
+    }
+
+    .footer-logo img {
+      max-height: 100px;
+      width: auto;
+      object-fit: contain;
+      filter: 
+        drop-shadow(1px 0px 0px #ffffff) 
+        drop-shadow(-1px 0px 0px #ffffff) 
+        drop-shadow(0px 1px 0px #ffffff) 
+        drop-shadow(0px -1px 0px #ffffff) 
+        drop-shadow(1px 1px 0px #ffffff) 
+        drop-shadow(-1px -1px 0px #ffffff) 
+        drop-shadow(1px -1px 0px #ffffff) 
+        drop-shadow(-1px 1px 0px #ffffff)
+        drop-shadow(0px 0px 2px #ffffff);
+    }
+
+    .footer-about {
+      font-size: 16px;
+      line-height: 1.8;
+      font-weight: 600;
+      color: #ffffff;
+      font-family: Georgia, 'Times New Roman', Times, serif;
+    }
+
+    .footer h4 {
+      color: #ffffff;
+      font-size: 18px;
+      font-weight: 700;
+      margin-bottom: 24px;
+      font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    }
+
+    .footer ul li {
+      margin-bottom: 12px;
+      font-size: 15px;
+      line-height: 1.6;
+      font-family: Georgia, 'Times New Roman', Times, serif;
+    }
+
+    .footer ul li a {
+      color: #ffffff;
+      transition: color 0.3s;
+      font-family: Georgia, 'Times New Roman', Times, serif;
+    }
+
+    .footer ul li a:hover {
+      color: var(--primary);
+      text-shadow: 4px 2px 16px #ffffff;
+    }
+
+    .social-list {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 15px;
+    }
+
+.social-icon {
+      width: 40px;
+      height: 40px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: none; /* Removed background box */
+      transition: transform 0.3s ease, filter 0.3s ease;
+    }
+
+    .social-icon img {
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+      /* Thick white outline tightly wrapping the PNG shape */
+      filter: drop-shadow(1px 0px 0px #ffffff) 
+              drop-shadow(-1px 0px 0px #ffffff) 
+              drop-shadow(0px 1px 0px #ffffff) 
+              drop-shadow(0px -1px 0px #ffffff) 
+              drop-shadow(1px 1px 0px #ffffff) 
+              drop-shadow(-1px -1px 0px #ffffff) 
+              ;
+    }
+
+    .social-icon:hover {
+      transform: translateY(-3px);
+      /* Lighter base outline on hover combined with a soft, bright glowing aura */
+      filter: drop-shadow(0 0 1px #ffffff) 
+              drop-shadow(0 0 5px #ffffff) 
+              drop-shadow(0 0 15px var(--secondary));
+    }
+
+    .copyright {
+      text-align: center;
+      padding-top: 24px;
+      border-top: 1px solid #eee;
+      font-size: 14px;
+      color: #ffffff;
+      font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    }
+
+    @media (max-width: 992px) {
+      .footer-grid { grid-template-columns: 1fr 1fr; }
+    }
+    @media (max-width: 576px) {
+      .footer-grid { grid-template-columns: 1fr; gap: 30px; }
+      .footer-logo img { max-height: 80px; }
+    }
+
+    /* ============================================================
+       6. FLOATING WHATSAPP
+    ============================================================ */
+    .float-wa {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      width: 60px;
+      height: 60px;
+      background-color: #ffffff;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      box-shadow: 0 0 15px rgba(251, 251, 251, 0.6), 0 0 35px rgba(251, 251, 251, 0.3);
+      z-index: 9999;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      text-decoration: none;
+    }
+
+    .float-wa svg {
+      width: 35px;
+      height: 35px;
+      fill: white;
+    }
+
+    .float-wa:hover {
+      transform: translateY(-5px) scale(1.05);
+      box-shadow: 0 8px 22px rgba(37, 211, 102, 0.5);
+    }
+
+    @media (max-width: 576px) {
+      .float-wa {
+        width: 50px;
+        height: 50px;
+        bottom: 15px;
+        right: 15px;
+      }
+      .float-wa svg {
+        width: 28px;
+        height: 28px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- ── HEADER ── -->
+  <header class="main-header">
+    <div class="container header-inner">
+      
+
+      <a href="index.html" class="logo" aria-label="Clinic Home">
+        <img src="LOGO/SJ-PHYSIOTHERAPY.png" alt="Physiotherapy Clinic Logo" onerror="this.src='data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyMDAiIGhlaWdodD0iNjAiPjxyZWN0IHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiIGZpbGw9IiNlZWVlZWUiLz48dGV4dCB4PSI1MCUiIHk9IjUwJSIgZm9udC1zaXplPSIxNiIgZmlsbD0iIzU1NSIgZHk9Ii4zZW0iIHRleHQtYW5jaG9yPSJtaWRkbGUiPkNMSU5JQyBMT0dPPC90ZXh0Pjwvc3ZnPg=='">
+      </a>
+
+      <div class="nav-wrapper">
+        <nav aria-label="Main navigation">
+          <ul class="nav-links" id="navLinks">
+            <li><a href="index.html" class="active">Services</a></li>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="resources.html">Resources</a></li>
+            <li><a href="contact.html">Contact Us</a></li>
+          </ul>
+        </nav>
+      </div>
+
+      <button class="hamburger" id="hamburger" aria-label="Toggle navigation" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+
+    </div>
+  </header>
+
+  <!-- ── HERO / WELCOME CONTENT ── -->
+  <section class="hero">
+    <div class="container">
+      <h1>Welcome to Our Specialized Services</h1>
+      <p class="hero-content">
+        Welcome to our clinic, where your movement, vitality, and well-being are our absolute priorities. We believe in a holistic, patient-centered approach to physiotherapy, dedicated to helping you overcome pain, recover from injuries, and achieve peak physical performance. Whether you are an athlete looking to safely return to your sport, an office professional dealing with repetitive strain, or an expectant mother seeking specialized pelvic health support, our expert team is here to guide your recovery. We combine evidence-based practices, advanced manual therapy techniques, and personalized exercise programs to address the root cause of your discomfort—not just the symptoms. Explore our specialized services below and take the first empowered step toward a stronger, healthier, and pain-free life.
+      </p>
+    </div>
+  </section>
+
+  <!-- ── ZIGZAG SERVICES SECTION ── -->
+  <section class="services-section">
+    <div class="container">
+      <h2 class="section-title">What We Offer</h2>
+
+      <!-- 1. Orthopaedic Rehab -->
+      <div class="service-row">
+        <div class="service-image">
+          <img src="assets/ortho-rehab.jpg" alt="Orthopaedic Rehabilitation" onerror="this.src='data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI4MDAiIGhlaWdodD0iNjAwIj48cmVjdCB3aWR0aD0iMTAwJSIgaGVpZ2h0PSIxMDAlIiBmaWxsPSIjZWVlZWVlIi8+PHRleHQgeD0iNTAlIiB5PSI1MCUiIGZvbnQtc2l6ZT0iMjQiIGZpbGw9IiM1NTUiIGR5PSIuM2VtIiB0ZXh0LWFuY2hvcj0ibWlkZGxlIj5PcnRob3BhZWRpYyBSZWhhYiBJbWFnZTwvdGV4dD48L3N2Zz4='">
+        </div>
+        <div class="service-content">
+          <h3>Orthopaedic Rehab</h3>
+          <p>Targeted rehabilitation designed to restore mobility, build strength, and relieve persistent discomfort. We focus on getting your musculoskeletal system functioning perfectly so you can return to your daily activities unhindered.</p>
+          <ul class="service-list">
+            <li>Back pain and neck strain management</li>
+            <li>Arthritis pain relief and joint care</li>
+            <li>Comprehensive post-surgical recovery</li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- 2. Sports Injury Clinic -->
+      <div class="service-row">
+        <div class="service-image">
+          <img src="assets/sports-injury.jpg" alt="Sports Injury Clinic" onerror="this.src='data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI4MDAiIGhlaWdodD0iNjAwIj48cmVjdCB3aWR0aD0iMTAwJSIgaGVpZ2h0PSIxMDAlIiBmaWxsPSIjZWVlZWVlIi8+PHRleHQgeD0iNTAlIiB5PSI1MCUiIGZvbnQtc2l6ZT0iMjQiIGZpbGw9IiM1NTUiIGR5PSIuM2VtIiB0ZXh0LWFuY2hvcj0ibWlkZGxlIj5TcG9ydHMgSW5qdXJ5IEltYWdlPC90ZXh0Pjwvc3ZnPg=='">
+        </div>
+        <div class="service-content">
+          <h3>Sports Injury Clinic</h3>
+          <p>Get back in the game faster and stronger. We provide expert care tailored to athletes of all levels, focusing on rapid recovery and future injury prevention through sports-specific mechanics.</p>
+          <ul class="service-list">
+            <li>Rehabilitation for ligament tears (ACL/MCL)</li>
+            <li>Treatment for acute sprains and strains</li>
+            <li>Sports-specific conditioning and agility training</li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- 3. Ergonomic Training -->
+      <div class="service-row">
+        <div class="service-image">
+          <img src="assets/ergonomic.jpg" alt="Ergonomic Training" onerror="this.src='data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI4MDAiIGhlaWdodD0iNjAwIj48cmVjdCB3aWR0aD0iMTAwJSIgaGVpZ2h0PSIxMDAlIiBmaWxsPSIjZWVlZWVlIi8+PHRleHQgeD0iNTAlIiB5PSI1MCUiIGZvbnQtc2l6ZT0iMjQiIGZpbGw9IiM1NTUiIGR5PSIuM2VtIiB0ZXh0LWFuY2hvcj0ibWlkZGxlIj5Fcmdvbm9taWMgVHJhaW5pbmcgSW1hZ2U8L3RleHQ+PC9zdmc+'">
+        </div>
+        <div class="service-content">
+          <h3>Ergonomic Training</h3>
+          <p>Protect your body from the stresses of the modern workplace. We assess your daily setup and teach you how to maintain optimal alignment to prevent long-term wear and tear.</p>
+          <ul class="service-list">
+            <li>Workplace postural assessment and correction</li>
+            <li>Prevention of repetitive strain injuries (RSI)</li>
+            <li>Customized desk setup recommendations</li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- 4. Manual Therapy -->
+      <div class="service-row">
+        <div class="service-image">
+          <img src="assets/manual-therapy.jpg" alt="Manual Therapy" onerror="this.src='data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI4MDAiIGhlaWdodD0iNjAwIj48cmVjdCB3aWR0aD0iMTAwJSIgaGVpZ2h0PSIxMDAlIiBmaWxsPSIjZWVlZWVlIi8+PHRleHQgeD0iNTAlIiB5PSI1MCUiIGZvbnQtc2l6ZT0iMjQiIGZpbGw9IiM1NTUiIGR5PSIuM2VtIiB0ZXh0LWFuY2hvcj0ibWlkZGxlIj5NYW51YWwgVGhlcmFweSBJbWFnZTwvdGV4dD48L3N2Zz4='">
+        </div>
+        <div class="service-content">
+          <h3>Manual Therapy</h3>
+          <p>Hands-on clinical techniques utilized to diagnose and treat soft tissue and joint structures. This approach modulates pain, increases range of motion, and reduces or eliminates soft tissue inflammation.</p>
+          <ul class="service-list">
+            <li>Joint mobilization and manipulation</li>
+            <li>Targeted myofascial release</li>
+            <li>Precise trigger point therapy</li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- 5. Exercise Therapy -->
+      <div class="service-row">
+        <div class="service-image">
+          <img src="assets/exercise-therapy.jpg" alt="Exercise Therapy" onerror="this.src='data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI4MDAiIGhlaWdodD0iNjAwIj48cmVjdCB3aWR0aD0iMTAwJSIgaGVpZ2h0PSIxMDAlIiBmaWxsPSIjZWVlZWVlIi8+PHRleHQgeD0iNTAlIiB5PSI1MCUiIGZvbnQtc2l6ZT0iMjQiIGZpbGw9IiM1NTUiIGR5PSIuM2VtIiB0ZXh0LWFuY2hvcj0ibWlkZGxlIj5FeGVyY2lzZSBUaGVyYXB5IEltYWdlPC90ZXh0Pjwvc3ZnPg=='">
+        </div>
+        <div class="service-content">
+          <h3>Exercise Therapy</h3>
+          <p>Movement is medicine. We design customized therapeutic exercise routines to enhance physical endurance, correct muscular imbalances, and promote long-lasting structural health.</p>
+          <ul class="service-list">
+            <li>Personalized strengthening programs</li>
+            <li>Supervised group exercise sessions</li>
+            <li>Flexibility and mobility restoration</li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- 6. Biomechanical Correction -->
+      <div class="service-row">
+        <div class="service-image">
+          <img src="assets/biomechanical.jpg" alt="Biomechanical Correction" onerror="this.src='data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI4MDAiIGhlaWdodD0iNjAwIj48cmVjdCB3aWR0aD0iMTAwJSIgaGVpZ2h0PSIxMDAlIiBmaWxsPSIjZWVlZWVlIi8+PHRleHQgeD0iNTAlIiB5PSI1MCUiIGZvbnQtc2l6ZT0iMjQiIGZpbGw9IiM1NTUiIGR5PSIuM2VtIiB0ZXh0LWFuY2hvcj0ibWlkZGxlIj5CaW9tZWNoYW5pY2FsIENvcnJlY3Rpb24gSW1hZ2U8L3RleHQ+PC9zdmc+'">
+        </div>
+        <div class="service-content">
+          <h3>Biomechanical Correction</h3>
+          <p>Identifying and correcting flawed movement patterns that cause chronic pain. We analyze how you move and implement adjustments to ensure your body functions efficiently and pain-free.</p>
+          <ul class="service-list">
+            <li>Reversal of chronic posture issues</li>
+            <li>Treatment for recurring tension headaches</li>
+            <li>Gait analysis and walking correction</li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- 7. Dry Needling -->
+      <div class="service-row">
+        <div class="service-image">
+          <img src="assets/dry-needling.jpg" alt="Dry Needling" onerror="this.src='data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI4MDAiIGhlaWdodD0iNjAwIj48cmVjdCB3aWR0aD0iMTAwJSIgaGVpZ2h0PSIxMDAlIiBmaWxsPSIjZWVlZWVlIi8+PHRleHQgeD0iNTAlIiB5PSI1MCUiIGZvbnQtc2l6ZT0iMjQiIGZpbGw9IiM1NTUiIGR5PSIuM2VtIiB0ZXh0LWFuY2hvcj0ibWlkZGxlIj5EcnkgTmVlZGxpbmcgSW1hZ2U8L3RleHQ+PC9zdmc+'">
+        </div>
+        <div class="service-content">
+          <h3>Dry Needling</h3>
+          <p>A highly effective technique using fine needles to release muscular trigger points, relieve spasms, and improve blood flow, resulting in rapid pain relief and improved muscle function.</p>
+          <ul class="service-list">
+            <li>Targeting and releasing deep muscle knots</li>
+            <li>Effective relief for "frozen shoulder"</li>
+            <li>Management of chronic muscular tension</li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- 8. IASTM / Scrapping -->
+      <div class="service-row">
+        <div class="service-image">
+          <img src="assets/iastm.jpg" alt="IASTM / Scrapping" onerror="this.src='data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI4MDAiIGhlaWdodD0iNjAwIj48cmVjdCB3aWR0aD0iMTAwJSIgaGVpZ2h0PSIxMDAlIiBmaWxsPSIjZWVlZWVlIi8+PHRleHQgeD0iNTAlIiB5PSI1MCUiIGZvbnQtc2l6ZT0iMjQiIGZpbGw9IiM1NTUiIGR5PSIuM2VtIiB0ZXh0LWFuY2hvcj0ibWlkZGxlIj5JQVNUTSBJbWFnZTwvdGV4dD48L3N2Zz4='">
+        </div>
+        <div class="service-content">
+          <h3>IASTM / Scrapping</h3>
+          <p>Instrument-Assisted Soft Tissue Mobilization (IASTM) utilizes specialized tools to detect and treat fascial restrictions and scar tissue, promoting a healthier healing response.</p>
+          <ul class="service-list">
+            <li>Treatment for tennis elbow and tendonitis</li>
+            <li>Relief for persistent plantar fasciitis</li>
+            <li>Effective surgical scar tissue management</li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- 9. Women’s Health -->
+      <div class="service-row">
+        <div class="service-image">
+          <img src="assets/womens-health.jpg" alt="Women’s Health" onerror="this.src='data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI4MDAiIGhlaWdodD0iNjAwIj48cmVjdCB3aWR0aD0iMTAwJSIgaGVpZ2h0PSIxMDAlIiBmaWxsPSIjZWVlZWVlIi8+PHRleHQgeD0iNTAlIiB5PSI1MCUiIGZvbnQtc2l6ZT0iMjQiIGZpbGw9IiM1NTUiIGR5PSIuM2VtIiB0ZXh0LWFuY2hvcj0ibWlkZGxlIj5Xb21lbidzIEhlYWx0aCBJbWFnZTwvdGV4dD48L3N2Zz4='">
+        </div>
+        <div class="service-content">
+          <h3>Women’s Health</h3>
+          <p>Specialized, compassionate care addressing the unique musculoskeletal issues women face throughout different life stages, from pregnancy to postpartum and beyond.</p>
+          <ul class="service-list">
+            <li>
+              <span><strong>Prenatal & Postnatal Care:</strong> Safe exercise programs during pregnancy and comprehensive recovery plans to restore core strength after childbirth.</span>
+            </li>
+            <li>
+              <span><strong>Diastasis Recti Recovery:</strong> Specialized assessment and targeted rehabilitation for abdominal muscle separation.</span>
+            </li>
+            <li>
+              <span><strong>Pelvic Floor Rehabilitation:</strong> Discreet, effective treatment for incontinence, pelvic organ prolapse, and pelvic pain.</span>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ── FOOTER ── -->
+  <footer class="footer" aria-label="Site footer">
+    <div class="container">
+      <div class="footer-grid">
+
+        <div>
+          <div class="footer-logo">
+            <img src="LOGO/SJ-PHYSIOTHERAPY.png" alt="Physiotherapy Clinic Logo">
+          </div>
+          <p class="footer-about">" Restoring movement, empowering lives. Your trusted partner in physical wellness and recovery. "</p>
+        </div>
+
+        <div>
+          <h4>Address</h4>
+          <ul>
+            <li><b>SJ Physiotherapy Clinic</b> <br>No - 243, Ground floor, <br>Anaiyankadu Extension Main Road, <br>Singanallur, Coimbatore - 641005 </li>
+            <li> +91 96294 95946</li>
+            <li> Info.sjphysiotherapy@gmail.com </li>
+          </ul>
+        </div>
+
+        <div>
+          <h4>Our Services</h4>
+          <ul>
+            <li><a href="#">Orthopaedic Rehab</a></li>
+            <li><a href="#">Sports Injury Clinic</a></li>
+            <li><a href="#">Women's Health</a></li>
+            <li><a href="#">Manual Therapy</a></li>
+            <li><a href="#">Dry Needling</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4>Quick Links</h4>
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="resources.html">Resources</a></li>
+            <li><a href="contact.html">Contact Us</a></li>
+          </ul>
+        </div>
+
+      </div>
+      
+      <div class="social-list" style="justify-content: center; margin-bottom: 20px;">
+        <a href="#" class="social-icon" aria-label="Instagram"><img src="SOCIAL MEDIA/INSTA.png" alt="Instagram"></a>
+        <a href="#" class="social-icon" aria-label="Facebook"><img src="SOCIAL MEDIA/FACEBOOK.png" alt="Facebook"></a>
+        <a href="#" class="social-icon" aria-label="Mail"><img src="SOCIAL MEDIA/MAIL.png" alt="Mail"></a>
+        <a href="#" class="social-icon" aria-label="YouTube"><img src="SOCIAL MEDIA/YOUTUBE.png" alt="YouTube"></a>
+      </div>
+
+      <div class="copyright">
+        <p>&copy; 2026 SJ Physiotherapy Clinic. All Rights Reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ── FLOATING WHATSAPP ── -->
+<a href="https://wa.me/919876543210?text=Hello,%20I%20would%20like%20to%20book%20an%20appointment." class="float-wa" target="_blank" aria-label="Chat with us on WhatsApp">
+    <img src="SOCIAL MEDIA/WA.png" alt="WhatsApp">
+  </a>
+
+  <!-- ── JAVASCRIPT ── -->
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      const hamburger = document.getElementById('hamburger');
+      const navLinks = document.getElementById('navLinks');
+      const body = document.body;
+
+      /* Open/Close Mobile Menu */
+      hamburger.addEventListener('click', function() {
+        const isOpen = navLinks.classList.toggle('open');
+        hamburger.classList.toggle('open', isOpen);
+        hamburger.setAttribute('aria-expanded', isOpen);
+        body.classList.toggle('menu-open', isOpen); // Locks or unlocks body scroll
+      });
+
+      /* Close menu when clicking a link (mobile) */
+      const links = navLinks.querySelectorAll('a');
+      links.forEach(link => {
+        link.addEventListener('click', () => {
+          navLinks.classList.remove('open');
+          hamburger.classList.remove('open');
+          hamburger.setAttribute('aria-expanded', 'false');
+          body.classList.remove('menu-open'); // Unlocks body scroll
+        });
+      });
+    });
+  </script>
+
+</body>
+</html>
+
