@@ -1,0 +1,347 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Contact Us | SJ Physiotherapy</title>
+<meta name="title" content="Contact Us | SJ Physiotherapy">
+<meta name="description" content="Get in touch with SJ Physiotherapy in Singanallur, Coimbatore. Book an appointment, ask a question or find our clinic location and contact details.">
+<meta name="keywords" content="SJ Physiotherapy contact, physiotherapy clinic Coimbatore contact, book appointment Singanallur, physiotherapy clinic location">
+<meta name="author" content="SJ Physiotherapy">
+<meta name="robots" content="index, follow">
+<meta name="language" content="English">
+
+<link rel="sitemap" type="application/xml" title="Sitemap" href="https://sj-physiotherapy.github.io/sitemap.xml" />
+<link rel="canonical" href="https://sj-physiotherapy.github.io/contact-us.html">
+
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://sj-physiotherapy.github.io/contact-us.html">
+<meta property="og:title" content="Contact Us | SJ Physiotherapy">
+<meta property="og:description" content="Get in touch with us. Book an appointment, ask a question, or find our clinic location and contact details.">
+<meta property="og:image" content="https://sj-physiotherapy.github.io/LOGO/SJ-PHYSIOTHERAPHY OG IMAGE.png">
+<meta property="og:image:type" content="image/png">
+<meta property="og:image:width" content="1080">
+<meta property="og:image:height" content="1080">
+<meta property="og:site_name" content="SJ Physiotherapy">
+
+<link rel="apple-touch-icon" sizes="180x180" href="LOGO/favicon.png">
+<link rel="icon" href="LOGO/favicon.png" type="image/png">
+
+<!-- ========== SCHEMA.ORG LOCAL BUSINESS ========== -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "MedicalClinic",
+  "name": "SJ Physiotherapy",
+  "image": "https://sj-physiotherapy.github.io/LOGO/SJ-PHYSIOTHERAPY.png",
+  "description": "Professional Physiotherapy Clinic in Singanallur, Coimbatore offering orthopaedic rehab, sports injury recovery and women's health services.",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "No - 243, Ground floor, Analyangadu Extension Main Road, Singanallur",
+    "addressLocality": "Coimbatore",
+    "addressRegion": "Tamil Nadu",
+    "postalCode": "641005",
+    "addressCountry": "IN"
+  },
+  "telephone": "+91-9629495946",
+  "email": "Info.sjphysiotherapy@gmail.com",
+  "url": "https://sj-physiotherapy.github.io"
+}
+</script>
+
+<style>
+
+/* ============================================================
+     1. CSS VARIABLES & RESET
+============================================================ */
+
+*, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+html { scroll-behavior: smooth; font-size: 16px; overflow-x: hidden; }
+body { font-family: 'Segoe UI', system-ui, sans-serif; color: #424242; line-height: 1.6; background-color: #ffffff; overflow-x: hidden; width: 100%; }
+a { text-decoration: none; color: inherit; }
+ul { list-style: none; }
+img { max-width: 100%; display: block; height: auto; }
+button { cursor: pointer; font-family: inherit; border: none; }
+.container {width: 100%; max-width: none; margin: 0 auto; padding: 0 20px;}
+body.menu-open { overflow: hidden; height: 100vh; }
+
+
+
+/* ============================================================
+   2. HEADER & NAVIGATION
+============================================================ */
+
+.main-header { background: linear-gradient(135deg, #2778b7 0%, #a8d339 100%); box-shadow: 0 2px 15px rgba(0,0,0,.05); position: sticky; top: 0; z-index: 900; width: 100%; }
+.header-inner { display: flex; justify-content: space-between; align-items: center; height: 120px; padding: 10px 10px;}
+.logo { display: flex; align-items: center; flex-shrink: 0; max-width: 60%;}
+.logo img { height: 120px; width: auto; object-fit: contain; filter: drop-shadow(1px 0px 0px #ffffff) drop-shadow(-1px 0px 0px #ffffff) drop-shadow(0px 1px 0px #ffffff) drop-shadow(0px -1px 0px #ffffff) drop-shadow(1px 1px 0px #ffffff) drop-shadow(-1px -1px 0px #ffffff) drop-shadow(1px -1px 0px #ffffff) drop-shadow(-1px 1px 0px #ffffff) drop-shadow(0px 0px 2px #ffffff);}
+.nav-wrapper { flex: 1; display: flex; justify-content: flex-end;}
+.nav-links { display: flex; align-items: center; gap: 32px;}
+.nav-links a { font-weight: 600; font-size: 17px; color: #0e428c; position: relative; padding: 8px 0; transition: color .3s; font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;}
+.nav-links a:hover, .nav-links a.active { color: #ffffff;}
+
+
+/* ============ Hamburger ============ */
+    
+.hamburger { display: none; flex-direction: column; gap: 6px; background: none; padding: 8px; z-index: 910;}
+.hamburger span { display: block; width: 26px; height: 2px; background: #ffffff; border-radius: 2px; transition: all 0.3s ease;}
+.hamburger.open span:nth-child(1) { transform: translateY(8px) rotate(45deg); }
+.hamburger.open span:nth-child(2) { opacity: 0; }
+.hamburger.open span:nth-child(3) { transform: translateY(-8px) rotate(-45deg); }
+
+
+@media (max-width: 900px) 
+
+{
+      
+.header-inner { height: 100px;}
+.logo img { height: 100px;}
+.nav-wrapper { justify-content: flex-end; }
+.hamburger { display: flex; margin-left: 15px; }  
+.nav-links { position: fixed; top: 80px; left: 0; right: 0; bottom: 0; height: calc(100vh - 80px); background: linear-gradient(135deg, #2778b7 0%, #a8d339 100%); flex-direction: column; align-items: center; justify-content: flex-start; gap: 0; padding: 30px 0; box-shadow: 0 8px 24px rgba(0,0,0,.1); z-index: 995; opacity: 0; visibility: hidden; transition: opacity 0.3s ease, visibility 0.3s ease; }
+.nav-links.open { opacity: 1; visibility: visible;}
+.nav-links a { display: block; width: 100%; text-align: center; padding: 16px 20px; border-bottom: 1px solid #eee; }
+    
+}
+
+
+@media (max-width: 600px) 
+
+{
+.header-inner { height: 100px;}
+.logo img { height: 110px; }
+
+
+}
+
+/* ============================================================
+     3. HERO / WELCOME SECTION
+============================================================ */
+    
+.hero { background: linear-gradient(135deg, #2778b7 0%, #a8d339 100%), url('assets/hero-bg.jpg') center/cover no-repeat; color: #ffffff; padding: clamp(40px, 8vw, 50px) 0 40px 0; text-align: center; width: 100%; }
+.hero h1 { font-size: 40px; font-weight: 800; margin-bottom: 24px; letter-spacing: -0.5px; line-height: 1.2;}
+.hero-content { font-family: Georgia, 'Times New Roman', Times, serif; margin: 0 auto; font-size: 18px; line-height: 1.8; color: rgba(255, 255, 255, 0.95); padding: 0 10px;}
+
+
+@media (max-width: 600px) 
+    
+{
+
+.hero h1 { font-size: 22px;}
+.hero-content {font-size: 14px;}
+    
+}
+
+
+
+
+
+/* ============================================================
+  5. FOOTER
+============================================================ */
+
+.footer { background: linear-gradient(135deg, #2778b7 0%, #a8d339 100%); color: #424242; padding: clamp(50px, 8vw, 80px) 0 20px; border-top: 1px solid #e0e0e0; overflow: hidden; color: #ffffff;}
+.footer-grid { display: grid; grid-template-columns: 2fr 1fr 1fr 1fr; gap: 40px; margin-bottom: 40px; }
+.footer-logo {  margin-bottom: 20px;}
+.footer-logo img { max-height: 100px; width: auto; object-fit: contain; filter:  drop-shadow(1px 0px 0px #ffffff)  drop-shadow(-1px 0px 0px #ffffff)  drop-shadow(0px 1px 0px #ffffff)  drop-shadow(0px -1px 0px #ffffff)  drop-shadow(1px 1px 0px #ffffff)  drop-shadow(-1px -1px 0px #ffffff)  drop-shadow(1px -1px 0px #ffffff)  drop-shadow(-1px 1px 0px #ffffff) drop-shadow(0px 0px 2px #ffffff);}
+.footer-about { font-size: 16px; line-height: 1.8; font-weight: 600; color: #ffffff; font-family: Georgia, 'Times New Roman', Times, serif; }
+.footer h4 { color: #ffffff; font-size: 18px; font-weight: 700; margin-bottom: 24px; font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif; }
+.footer ul li { margin-bottom: 12px; font-size: 15px; line-height: 1.6; font-family: Georgia, 'Times New Roman', Times, serif;}
+.footer ul li a { color: #ffffff; transition: color 0.3s; font-family: Georgia, 'Times New Roman', Times, serif; }
+.footer ul li a:hover { color: #2778b7; text-shadow: 4px 2px 16px #ffffff;}
+.social-list { display: flex; flex-wrap: wrap; gap: 15px; }
+.social-icon { width: 40px; height: 40px; display: flex; align-items: center; justify-content: center; background: none; /* Removed background box */ transition: transform 0.3s ease, filter 0.3s ease; }
+.social-icon img { width: 100%; height: 100%; object-fit: contain; filter: drop-shadow(1px 0px 0px #ffffff) drop-shadow(-1px 0px 0px #ffffff) drop-shadow(0px 1px 0px #ffffff) drop-shadow(0px -1px 0px #ffffff) drop-shadow(1px 1px 0px #ffffff) drop-shadow(-1px -1px 0px #ffffff);}
+.social-icon:hover {transform: translateY(-3px); filter: drop-shadow(0 0 1px #ffffff) drop-shadow(0 0 5px #ffffff) drop-shadow(0 0 15px #00acc1); }
+.copyright { text-align: center; padding-top: 24px; border-top: 1px solid #eee; font-size: 14px; color: #ffffff; font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif; }
+
+    
+@media (max-width: 992px) 
+
+{
+
+.footer-grid { grid-template-columns: 1fr 1fr; }
+    
+}
+    
+
+@media (max-width: 600px) 
+
+{
+
+.footer-about{font-size: 14px;}
+.footer-grid { grid-template-columns: 1fr; gap: 30px; }
+.footer-logo img { max-height: 80px; }
+.copyright {font-size: 12px;}
+    
+}
+
+   
+/* ============================================================
+     6. FLOATING WHATSAPP
+============================================================ */
+
+.float-wa { position: fixed; bottom: 20px; right: 20px; width: 60px; height: 60px; background-color: #ffffff; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 0 15px rgba(251, 251, 251, 0.6), 0 0 35px rgba(251, 251, 251, 0.3); z-index: 9999; transition: transform 0.3s ease, box-shadow 0.3s ease; text-decoration: none; filter: drop-shadow(0 0 1px #ffffff) drop-shadow(0 0 2px #ffffff)  drop-shadow(0 0 5px #ffffff);}
+.float-wa img { width: 55px; height: 55px; fill: white;}
+.float-wa:hover { transform: translateY(-5px) scale(1.05); box-shadow: 0 8px 22px rgba(255, 255, 255, 0.5);}
+
+
+@media (max-width: 600px) 
+
+{
+      
+.float-wa {width: 50px; height: 50px; bottom: 15px; right: 15px; filter: drop-shadow(0 0 5px #ffffff) drop-shadow(0 0 1px #ffffff) ;}
+.float-wa img {width: 42px; height: 42px;}
+
+}
+
+
+</style>
+
+</head>
+
+
+<body>
+
+  <!-- ── HEADER ── -->
+  <header class="main-header">
+    <div class="container header-inner">
+      
+
+      <a href="index.html" class="logo" aria-label="Clinic Home">
+        <img src="LOGO/SJ-PHYSIOTHERAPY.png" alt="Physiotherapy Clinic Logo">
+      </a>
+
+      <div class="nav-wrapper">
+        <nav aria-label="Main navigation">
+          <ul class="nav-links" id="navLinks">
+            <li><a href="index.html">Services</a></li>
+            <li><a href="about-us.html">About Us</a></li>
+            <li><a href="resources.html">Resources</a></li>
+            <li><a href="contact-us.html" class="active">Contact Us</a></li>
+          </ul>
+        </nav>
+      </div>
+
+      <button class="hamburger" id="hamburger" aria-label="Toggle navigation" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+
+    </div>
+  </header>
+
+  <!-- ── HERO / WELCOME CONTENT ── -->
+  <section class="hero">
+    <div class="container">
+      <h1>Get In Touch</h1>
+      <p class="hero-content">
+        We're here to answer your questions and help you book your next appointment. Reach out to us anytime.
+      </p>
+    </div>
+  </section>
+
+  <!-- ── MAIN PAGE CONTENT ── -->
+  <main>
+    <section class="contact-section">
+      <div class="container">
+        <!-- CONTACT US CONTENT GOES HERE -->
+      </div>
+    </section>
+  </main>
+
+  <!-- ── FOOTER ── -->
+  <footer class="footer" aria-label="Site footer">
+    <div class="container">
+      <div class="footer-grid">
+
+        <div>
+          <div class="footer-logo">
+            <img src="LOGO/SJ-PHYSIOTHERAPY.png" alt="Physiotherapy Clinic Logo">
+          </div>
+          <p class="footer-about">" Restoring movement, empowering lives. Your trusted partner in physical wellness and recovery. "</p>
+        </div>
+
+        <div>
+          <h4>Address</h4>
+          <ul>
+            <li><b>SJ Physiotherapy</b> <br>No - 243, Ground floor, <br>Analyangadu Extension Main Road, <br>Singanallur, Coimbatore - 641005 </li>
+            <li> +91 96294 95946</li>
+            <li> Info.sjphysiotherapy@gmail.com </li>
+          </ul>
+        </div>
+
+        <div>
+          <h4>Our Services</h4>
+          <ul>
+            <li>* Orthopaedic Rehab</li>
+            <li>* Sports Injury Clinic</li>
+            <li>* Women's Health</li>
+            <li>* Manual Therapy</li>
+            <li>* Dry Needling</li>
+          </ul>
+        </div>
+
+        <div>
+          <h4>Quick Links</h4>
+          <ul>
+            <li><a href="index.html">* Home</a></li>
+            <li><a href="about.html">* About Us</a></li>
+            <li><a href="resources.html">* Resources</a></li>
+            <li><a href="contact.html">* Contact Us</a></li>
+          </ul>
+        </div>
+
+      </div>
+      
+     
+      <div class="social-list" style="justify-content: center; margin-bottom: 10px;">
+        <a href="#" class="social-icon" aria-label="Instagram"><img src="SOCIAL MEDIA/INSTA.png" alt="Instagram"></a>
+        <a href="#" class="social-icon" aria-label="Facebook"><img src="SOCIAL MEDIA/FACEBOOK.png" alt="Facebook"></a>
+        <a href="#" class="social-icon" aria-label="Mail"><img src="SOCIAL MEDIA/MAIL.png" alt="Mail"></a>
+        <a href="#" class="social-icon" aria-label="YouTube"><img src="SOCIAL MEDIA/YOUTUBE.png" alt="YouTube"></a>
+      </div>
+      <p style="text-align: center; color: #ffffff; font-family: Georgia, 'Times New Roman', Times, serif; font-size: 16px; margin-bottom: 20px;"><b>Connect With Us</b></p>
+
+
+      
+      <div class="copyright">
+        <p>&copy; 2026 SJ Physiotherapy. All Rights Reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ── FLOATING WHATSAPP ── -->
+<a href="https://wa.me/919629495946?text=Hello,%20I%20would%20like%20to%20book%20an%20appointment." class="float-wa" target="_blank" aria-label="Chat with us on WhatsApp">
+    <img src="SOCIAL MEDIA/WA.png" alt="WhatsApp">
+  </a>
+
+  <!-- ── JAVASCRIPT ── -->
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      const hamburger = document.getElementById('hamburger');
+      const navLinks = document.getElementById('navLinks');
+      const body = document.body;
+
+      /* Open/Close Mobile Menu */
+      hamburger.addEventListener('click', function() {
+        const isOpen = navLinks.classList.toggle('open');
+        hamburger.classList.toggle('open', isOpen);
+        hamburger.setAttribute('aria-expanded', isOpen);
+        body.classList.toggle('menu-open', isOpen); // Locks or unlocks body scroll
+      });
+
+      /* Close menu when clicking a link (mobile) */
+      const links = navLinks.querySelectorAll('a');
+      links.forEach(link => {
+        link.addEventListener('click', () => {
+          navLinks.classList.remove('open');
+          hamburger.classList.remove('open');
+          hamburger.setAttribute('aria-expanded', 'false');
+          body.classList.remove('menu-open'); // Unlocks body scroll
+        });
+      });
+    });
+  </script>
+
+</body>
+</html>
