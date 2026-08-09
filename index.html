@@ -6,7 +6,7 @@
 <title>Our Services | SJ Physiotherapy</title>
 <meta name="title" content="Our Services | SJ Physiotherapy">
 <meta name="description" content="SJ Physiotherapy offers specialized treatments in Coimbatore including orthopaedic rehab, sports injury recovery, manual therapy and women's health services.">
-<meta name="keywords" content="SJ Physiotherapy services, physiotherapy Coimbatore, orthopaedic rehab, sports injury clinic, manual therapy, women's health physiotherapy, Singanallur physiotherapist"> 
+<meta name="keywords" content="SJ Physiotherapy services, physiotherapy Coimbatore orthopaedic rehab, sports injury, manual therapy, women's health physiotherapy, Singanallur physiotherapist"> 
 <meta name="author" content="SJ Physiotherapy">
 <meta name="robots" content="index, follow">
 <meta name="language" content="English">
@@ -310,7 +310,7 @@ body.menu-open { overflow: hidden; height: 100vh; }
 .techniques-division .division-title { background: linear-gradient(135deg, #00b6f3 0%, #0e428c 100%); }
 .techniques-division .division-intro { color: #ffffff; }
 .techniques-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: clamp(24px, 3vw, 40px); padding: 0 6px; }
-.techniques-division .service-row, .techniques-division .service-row:nth-child(even) { flex-direction: column; align-items: stretch; gap: 0; margin-bottom: 0; background: #2fa8e0; border-radius: 16px; overflow: hidden; box-shadow: 0 8px 26px rgba(14,66,140,.18); transition: background .35s ease, box-shadow .35s ease;}
+.techniques-division .service-row, .techniques-division .service-row:nth-child(even) { flex-direction: column; align-items: stretch; gap: 0; margin-bottom: 0; background: #ffffff; border-radius: 16px; overflow: hidden; box-shadow: 0 8px 26px rgba(14,66,140,.18); transition: background .35s ease, box-shadow .35s ease;}
 .techniques-division .service-image { width: 100%; margin-bottom: 0; }
 .techniques-division .service-image::before,
 .techniques-division .service-row:nth-child(even) .service-image::before { content: none; display: none; }
@@ -319,13 +319,13 @@ body.menu-open { overflow: hidden; height: 100vh; }
 .techniques-division .service-image:hover::before { transform: none; background: none; }
 
 .techniques-division .service-content { width: 100%; padding: 22px 26px 28px; text-align: left; }
-.techniques-division .service-content h3 { color: #ffffff; margin-bottom: 12px; transition: color .35s ease; }
-.techniques-division .service-content p { color: #ffffff; margin-bottom: 0; transition: color .35s ease; }
+.techniques-division .service-content h3 { color: #76b239; margin-bottom: 12px; }
+.techniques-division .service-content p { color: #1a1a1a; margin-bottom: 0; }
+.techniques-division .service-content ul { list-style: disc; margin: 10px 0 0; padding-left: 20px; font-family: Georgia, 'Times New Roman', Times, serif; font-size: 18px; color: #1a1a1a; }
+.techniques-division .service-content ul li { margin-bottom: 6px; }
 
 
-.techniques-division .service-row:hover { background: #ffffff; box-shadow: 0 12px 34px rgba(14,66,140,.28); }
-.techniques-division .service-row:hover .service-content h3 { color: #76b239; }
-.techniques-division .service-row:hover .service-content p { color: #1a1a1a; }
+
 
 @media (max-width: 900px) {
   .techniques-grid { grid-template-columns: repeat(2, 1fr); gap: 20px; padding: 0 4px; }
@@ -333,6 +333,7 @@ body.menu-open { overflow: hidden; height: 100vh; }
   .techniques-division .service-content { padding: 18px 20px 22px; }
   .techniques-division .service-content h3 { font-size: 20px; margin-bottom: 10px; }
   .techniques-division .service-content p { font-size: 15px; }
+   .techniques-division .service-content ul { font-size: 15px; }
 }
 
 @media (max-width: 600px) {
@@ -341,7 +342,42 @@ body.menu-open { overflow: hidden; height: 100vh; }
   .techniques-division .service-content { padding: 16px 18px 20px; }
   .techniques-division .service-content h3 { font-size: 19px; margin-bottom: 8px; }
   .techniques-division .service-content p { font-size: 14px; }
+   .techniques-division .service-content ul { font-size: 14px; }
+  
 }
+
+
+
+
+.tabs-hint { font-weight: 600; text-align: center; font-size: 17px; color: #0e428c; margin-bottom: 6px; font-family: Georgia, 'Times New Roman', Times, serif; }
+.tabs-arrow { text-align: center; font-size: 26px; line-height: 1;  color: #76b239; margin-bottom: 16px; animation: tabsArrowBounce 1.4s ease-in-out infinite; }
+@keyframes tabsArrowBounce { 0%, 100% { transform: translateY(0); } 50% { transform: translateY(6px); } }
+
+
+
+
+@media (max-width: 600px) 
+
+{
+
+.tabs-hint { font-size: 15px; }
+.tabs-arrow { font-size: 22px; margin-bottom: 12px; }
+
+
+}
+
+
+
+
+
+#introVideoOverlay { position: fixed; top: 0; left: 0; width: 100vw; height: 100vh; background: #ffffff; display: flex; align-items: center; justify-content: center; z-index: 999999; overflow: hidden; }
+#introVideoOverlay video { max-width: 100%; max-height: 100%; width: auto; height: auto; display: block; }
+body.intro-locked { overflow: hidden; height: 100vh; }
+#introVideo.trim-edge { transform: scale(1.04); }
+
+
+
+
 
 </style>
 
@@ -350,6 +386,17 @@ body.menu-open { overflow: hidden; height: 100vh; }
 
 
 <body>
+
+
+
+  <!-- ── INTRO VIDEO (plays once on landing, 5s) ── -->
+  <div id="introVideoOverlay">
+    <video id="introVideo" autoplay muted playsinline></video>
+  </div>
+
+
+
+
 
   <!-- ── HEADER ── -->
   <header class="main-header">
@@ -383,7 +430,7 @@ body.menu-open { overflow: hidden; height: 100vh; }
     <div class="container">
       <h1>Welcome to Our Specialized Services</h1>
       <p class="hero-content">
-        Welcome to our clinic, where your movement, vitality, and well-being are our absolute priorities. We believe in a holistic, patient-centered approach to physiotherapy, dedicated to helping you overcome pain, recover from injuries, and achieve peak physical performance. Whether you are an athlete looking to safely return to your sport, an office professional dealing with repetitive strain, or an expectant mother seeking specialized pelvic health support, our expert team is here to guide your recovery. We combine evidence-based practices, advanced manual therapy techniques, and personalized exercise programs to address the root cause of your discomfort—not just the symptoms. Explore our specialized services below and take the first empowered step toward a stronger, healthier, and pain-free life.
+        Welcome to our clinic, where your movement, vitality and well-being are our absolute priorities. We believe in a holistic, patient-centered approach to physiotherapy, dedicated to helping you overcome pain, recover from injuries and achieve peak physical performance. Whether you are an athlete looking to safely return to your sport, an office professional dealing with repetitive strain or an expectant mother seeking specialized pelvic health support, our expert team is here to guide your recovery. We combine evidence-based practices, advanced manual therapy techniques and personalized exercise programs to address the root cause of your discomfort—not just the symptoms. Explore our specialized services below and take the first empowered step toward a stronger, healthier and pain-free life.
       </p>
     </div>
   </section>
@@ -395,8 +442,13 @@ body.menu-open { overflow: hidden; height: 100vh; }
 
       <!-- ══════════════ DIVISION 1: CONDITIONS WE TREAT ══════════════ -->
       <div class="offer-division">
-        <h3 class="division-title">Conditions We Treat</h3>
+        <h3 class="division-title">Medical Conditions We Treat</h3>
         <p class="division-intro">From everyday aches to sports injuries and specialized care, our physiotherapists design an individualized recovery plan for every condition below.</p>
+
+
+      <p class="tabs-hint">Choose A Category Button Below To View its Full List of Medical Conditions We Treat.</p>
+      <div class="tabs-arrow"> ↓ ↓ ↓ ↓ </div>
+
 
         <div class="condition-tabs" role="tablist" aria-label="Condition categories">
           <button class="condition-tab active" type="button" data-target="tab-ortho" role="tab" aria-selected="true">Orthopaedic Conditions</button>
@@ -567,6 +619,23 @@ body.menu-open { overflow: hidden; height: 100vh; }
       </div>
         </div>
 
+
+      <div class="service-row">
+        <div class="service-image">
+          <img src="assets/conditions/osteoarthritis.jpg" alt="Osteoarthritis" onerror="this.src='data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI4MDAiIGhlaWdodD0iNjAwIj48cmVjdCB3aWR0aD0iMTAwJSIgaGVpZ2h0PSIxMDAlIiBmaWxsPSIjZWVlZWVlIi8+PHRleHQgeD0iNTAlIiB5PSI1MCUiIGZvbnQtc2l6ZT0iMjQiIGZpbGw9IiM1NTUiIGR5PSIuM2VtIiB0ZXh0LWFuY2hvcj0ibWlkZGxlIj5Pc3Rlb2FydGhyaXRpcyBJbWFnZTwvdGV4dD48L3N2Zz4='">
+        </div>
+        <div class="service-content">
+          <h3>Post-Surgical Rehabilitation</h3>
+          <p>Post-surgical rehabilitation helps restore movement, strength, mobility and function after surgery. At SJ Physiotherapy Clinic, we provide personalized rehabilitation following knee replacement, hip replacement, ACL reconstruction, shoulder surgery, fracture fixation, spine surgery and arthroscopy. Treatment may include mobility exercises, strengthening, manual therapy, balance training and functional rehabilitation, with progress guided by the individual’s recovery and surgical requirements.</p>
+        </div>
+      </div>
+
+
+
+
+
+
+
         <div class="condition-panel" id="tab-sports" role="tabpanel">
         <div class="service-row">
         <div class="service-image">
@@ -636,7 +705,7 @@ body.menu-open { overflow: hidden; height: 100vh; }
         </div>
         <div class="service-content">
           <h3>Postpartum Recovery</h3>
-          <p>After childbirth, women may experience reduced core strength, pelvic floor weakness, abdominal muscle separation, back pain or difficulty returning to normal activities. Postpartum physiotherapy provides individualized rehabilitation to support recovery. Treatment may include core strengthening, pelvic floor exercises, mobility work, posture correction and functional training. SJ Physiotherapy Clinic provides personalized care to help women regain strength, confidence and movement.</p>
+          <p>After childbirth, women may experience reduced core strength, pelvic floor weakness, abdominal muscle separation, back pain or difficulty returning to normal activities. Postpartum physiotherapy provides individualized rehabilitation to support recovery. Treatment may include core strengthening, pelvic floor exercises, mobility work, posture correction and functional training. SJ Physiotherapy provides personalized care to help women regain strength, confidence and movement.</p>
         </div>
       </div>
 
@@ -747,7 +816,7 @@ body.menu-open { overflow: hidden; height: 100vh; }
           <img src="assets/conditions/postural-problems.jpg" alt="Postural Problems" onerror="this.src='data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI4MDAiIGhlaWdodD0iNjAwIj48cmVjdCB3aWR0aD0iMTAwJSIgaGVpZ2h0PSIxMDAlIiBmaWxsPSIjZWVlZWVlIi8+PHRleHQgeD0iNTAlIiB5PSI1MCUiIGZvbnQtc2l6ZT0iMjQiIGZpbGw9IiM1NTUiIGR5PSIuM2VtIiB0ZXh0LWFuY2hvcj0ibWlkZGxlIj5Qb3N0dXJhbCBQcm9ibGVtcyBJbWFnZTwvdGV4dD48L3N2Zz4='">
         </div>
         <div class="service-content">
-          <h3>Postural Problems</h3>
+          <h3>Postural Dysfunctions</h3>
           <p>Poor posture can contribute to muscle tension, discomfort, movement limitations and recurring aches, particularly during prolonged sitting or standing. Physiotherapy can assess posture, movement patterns, muscle strength, flexibility and workplace habits to identify contributing factors. Treatment may include posture education, therapeutic exercises, strengthening, stretching, ergonomic guidance and biomechanical correction to encourage healthier and more comfortable movement.</p>
         </div>
       </div>
@@ -797,7 +866,7 @@ body.menu-open { overflow: hidden; height: 100vh; }
           <img src="assets/conditions/strength-improvement.jpg" alt="Strength Improvement" onerror="this.src='data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI4MDAiIGhlaWdodD0iNjAwIj48cmVjdCB3aWR0aD0iMTAwJSIgaGVpZ2h0PSIxMDAlIiBmaWxsPSIjZWVlZWVlIi8+PHRleHQgeD0iNTAlIiB5PSI1MCUiIGZvbnQtc2l6ZT0iMjQiIGZpbGw9IiM1NTUiIGR5PSIuM2VtIiB0ZXh0LWFuY2hvcj0ibWlkZGxlIj5TdHJlbmd0aCBJbXByb3ZlbWVudCBJbWFnZTwvdGV4dD48L3N2Zz4='">
         </div>
         <div class="service-content">
-          <h3>Strength Improvement</h3>
+          <h3>Strength Training</h3>
           <p>Maintaining muscle strength is important for older adults to remain active and independent. Reduced strength can affect walking, balance, transfers and everyday activities. Physiotherapy can provide progressive strengthening programs based on individual abilities and functional needs. At SJ Physiotherapy Clinic, exercises are carefully selected to improve strength, movement control and confidence while supporting safer performance of daily activities.</p>
         </div>
       </div>
@@ -831,45 +900,16 @@ body.menu-open { overflow: hidden; height: 100vh; }
         </div>
       </div>
 
-      <div class="service-row">
-        <div class="service-image">
-          <img src="assets/conditions/biomechanical-correction.jpg" alt="Biomechanical Correction" onerror="this.src='data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI4MDAiIGhlaWdodD0iNjAwIj48cmVjdCB3aWR0aD0iMTAwJSIgaGVpZ2h0PSIxMDAlIiBmaWxsPSIjZWVlZWVlIi8+PHRleHQgeD0iNTAlIiB5PSI1MCUiIGZvbnQtc2l6ZT0iMjQiIGZpbGw9IiM1NTUiIGR5PSIuM2VtIiB0ZXh0LWFuY2hvcj0ibWlkZGxlIj5CaW9tZWNoYW5pY2FsIENvcnJlY3Rpb24gSW1hZ2U8L3RleHQ+PC9zdmc+'">
-        </div>
-        <div class="service-content">
-          <h3>Biomechanical Correction</h3>
-          <p>Biomechanical correction focuses on identifying movement patterns that may contribute to pain, weakness, stiffness or recurring injuries. At SJ Physiotherapy Clinic, movement and functional patterns are assessed to understand individual needs. Treatment may include targeted exercises, movement retraining, strengthening and posture-related guidance to improve movement efficiency, physical function and confidence during everyday or sporting activities.</p>
-        </div>
-      </div>
-
-      <div class="service-row">
-        <div class="service-image">
-          <img src="assets/conditions/postural-correction.jpg" alt="Postural Correction" onerror="this.src='data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI4MDAiIGhlaWdodD0iNjAwIj48cmVjdCB3aWR0aD0iMTAwJSIgaGVpZ2h0PSIxMDAlIiBmaWxsPSIjZWVlZWVlIi8+PHRleHQgeD0iNTAlIiB5PSI1MCUiIGZvbnQtc2l6ZT0iMjQiIGZpbGw9IiM1NTUiIGR5PSIuM2VtIiB0ZXh0LWFuY2hvcj0ibWlkZGxlIj5Qb3N0dXJhbCBDb3JyZWN0aW9uIEltYWdlPC90ZXh0Pjwvc3ZnPg=='">
-        </div>
-        <div class="service-content">
-          <h3>Postural Correction</h3>
-          <p>Postural correction focuses on improving body alignment and movement habits that may contribute to discomfort or physical strain. Prolonged sitting, repetitive activities and poor movement patterns can affect posture over time. Physiotherapy may include strengthening, stretching, mobility exercises, ergonomic guidance and movement education to encourage better posture and support comfortable, efficient movement during daily activities.</p>
-        </div>
-      </div>
 
       <div class="service-row">
         <div class="service-image">
           <img src="assets/conditions/strengthening.jpg" alt="Strengthening" onerror="this.src='data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI4MDAiIGhlaWdodD0iNjAwIj48cmVjdCB3aWR0aD0iMTAwJSIgaGVpZ2h0PSIxMDAlIiBmaWxsPSIjZWVlZWVlIi8+PHRleHQgeD0iNTAlIiB5PSI1MCUiIGZvbnQtc2l6ZT0iMjQiIGZpbGw9IiM1NTUiIGR5PSIuM2VtIiB0ZXh0LWFuY2hvcj0ibWlkZGxlIj5TdHJlbmd0aGVuaW5nIEltYWdlPC90ZXh0Pjwvc3ZnPg=='">
         </div>
         <div class="service-content">
-          <h3>Strengthening</h3>
+          <h3>Strength and Conditioning</h3>
           <p>Strengthening exercises are an important part of physiotherapy rehabilitation for improving muscle capacity, joint support, movement control and functional performance. At SJ Physiotherapy Clinic, strengthening programs are individually prescribed according to the patient's condition, abilities and goals. Exercises can be progressed gradually to support recovery following injury, surgery, pain, weakness or reduced physical activity.</p>
         </div>
-      </div>
-
-      <div class="service-row">
-        <div class="service-image">
-          <img src="assets/conditions/core-stability-training.jpg" alt="Core Stability Training" onerror="this.src='data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI4MDAiIGhlaWdodD0iNjAwIj48cmVjdCB3aWR0aD0iMTAwJSIgaGVpZ2h0PSIxMDAlIiBmaWxsPSIjZWVlZWVlIi8+PHRleHQgeD0iNTAlIiB5PSI1MCUiIGZvbnQtc2l6ZT0iMjQiIGZpbGw9IiM1NTUiIGR5PSIuM2VtIiB0ZXh0LWFuY2hvcj0ibWlkZGxlIj5Db3JlIFN0YWJpbGl0eSBUcmFpbmluZyBJbWFnZTwvdGV4dD48L3N2Zz4='">
-        </div>
-        <div class="service-content">
-          <h3>Core Stability Training</h3>
-          <p>Core stability training focuses on improving the strength and control of muscles that support the trunk and spine. Better core control can contribute to efficient movement during daily activities, exercise and sports. At SJ Physiotherapy Clinic, individualized exercises are selected according to the patient's needs and may be progressively advanced to improve stability, strength, coordination and functional performance.</p>
-        </div>
-      </div>
+      </div>      
 
       <div class="service-row">
         <div class="service-image">
@@ -881,6 +921,40 @@ body.menu-open { overflow: hidden; height: 100vh; }
         </div>
       </div>
 
+
+      <div class="service-row">
+        <div class="service-image">
+          <img src="assets/conditions/biomechanical-correction.jpg" alt="Biomechanical Correction" onerror="this.src='data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI4MDAiIGhlaWdodD0iNjAwIj48cmVjdCB3aWR0aD0iMTAwJSIgaGVpZ2h0PSIxMDAlIiBmaWxsPSIjZWVlZWVlIi8+PHRleHQgeD0iNTAlIiB5PSI1MCUiIGZvbnQtc2l6ZT0iMjQiIGZpbGw9IiM1NTUiIGR5PSIuM2VtIiB0ZXh0LWFuY2hvcj0ibWlkZGxlIj5CaW9tZWNoYW5pY2FsIENvcnJlY3Rpb24gSW1hZ2U8L3RleHQ+PC9zdmc+'">
+        </div>
+        <div class="service-content">
+          <h3>Biomechanical Correction</h3>
+          <p>Biomechanical correction focuses on identifying movement patterns that may contribute to pain, weakness, stiffness or recurring injuries. At SJ Physiotherapy Clinic, movement and functional patterns are assessed to understand individual needs. Treatment may include targeted exercises, movement retraining, strengthening and posture-related guidance to improve movement efficiency, physical function and confidence during everyday or sporting activities.</p>
+        </div>
+      </div>
+
+
+      <div class="service-row">
+        <div class="service-image">
+          <img src="assets/conditions/core-stability-training.jpg" alt="Core Stability Training" onerror="this.src='data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI4MDAiIGhlaWdodD0iNjAwIj48cmVjdCB3aWR0aD0iMTAwJSIgaGVpZ2h0PSIxMDAlIiBmaWxsPSIjZWVlZWVlIi8+PHRleHQgeD0iNTAlIiB5PSI1MCUiIGZvbnQtc2l6ZT0iMjQiIGZpbGw9IiM1NTUiIGR5PSIuM2VtIiB0ZXh0LWFuY2hvcj0ibWlkZGxlIj5Db3JlIFN0YWJpbGl0eSBUcmFpbmluZyBJbWFnZTwvdGV4dD48L3N2Zz4='">
+        </div>
+        <div class="service-content">
+          <h3>Core Stability Training</h3>
+          <p>Core stability training focuses on improving the strength and control of muscles that support the trunk and spine. Better core control can contribute to efficient movement during daily activities, exercise and sports. At SJ Physiotherapy Clinic, individualized exercises are selected according to the patient's needs and may be progressively advanced to improve stability, strength, coordination and functional performance.</p>
+        </div>
+      </div>
+      
+
+      <div class="service-row">
+        <div class="service-image">
+          <img src="assets/conditions/postural-correction.jpg" alt="Postural Correction" onerror="this.src='data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI4MDAiIGhlaWdodD0iNjAwIj48cmVjdCB3aWR0aD0iMTAwJSIgaGVpZ2h0PSIxMDAlIiBmaWxsPSIjZWVlZWVlIi8+PHRleHQgeD0iNTAlIiB5PSI1MCUiIGZvbnQtc2l6ZT0iMjQiIGZpbGw9IiM1NTUiIGR5PSIuM2VtIiB0ZXh0LWFuY2hvcj0ibWlkZGxlIj5Qb3N0dXJhbCBDb3JyZWN0aW9uIEltYWdlPC90ZXh0Pjwvc3ZnPg=='">
+        </div>
+        <div class="service-content">
+          <h3>Postural Correction</h3>
+          <p>Postural correction focuses on improving body alignment and movement habits that may contribute to discomfort or physical strain. Prolonged sitting, repetitive activities and poor movement patterns can affect posture over time. Physiotherapy may include strengthening, stretching, mobility exercises, ergonomic guidance and movement education to encourage better posture and support comfortable, efficient movement during daily activities.</p>
+        </div>
+      </div>
+
+
       <div class="service-row">
         <div class="service-image">
           <img src="assets/conditions/dry-needling.jpg" alt="Dry Needling" onerror="this.src='data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI4MDAiIGhlaWdodD0iNjAwIj48cmVjdCB3aWR0aD0iMTAwJSIgaGVpZ2h0PSIxMDAlIiBmaWxsPSIjZWVlZWVlIi8+PHRleHQgeD0iNTAlIiB5PSI1MCUiIGZvbnQtc2l6ZT0iMjQiIGZpbGw9IiM1NTUiIGR5PSIuM2VtIiB0ZXh0LWFuY2hvcj0ibWlkZGxlIj5EcnkgTmVlZGxpbmcgSW1hZ2U8L3RleHQ+PC9zdmc+'">
@@ -891,15 +965,6 @@ body.menu-open { overflow: hidden; height: 100vh; }
         </div>
       </div>
 
-      <div class="service-row">
-        <div class="service-image">
-          <img src="assets/conditions/iastm.jpg" alt="IASTM" onerror="this.src='data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI4MDAiIGhlaWdodD0iNjAwIj48cmVjdCB3aWR0aD0iMTAwJSIgaGVpZ2h0PSIxMDAlIiBmaWxsPSIjZWVlZWVlIi8+PHRleHQgeD0iNTAlIiB5PSI1MCUiIGZvbnQtc2l6ZT0iMjQiIGZpbGw9IiM1NTUiIGR5PSIuM2VtIiB0ZXh0LWFuY2hvcj0ibWlkZGxlIj5JQVNUTSBJbWFnZTwvdGV4dD48L3N2Zz4='">
-        </div>
-        <div class="service-content">
-          <h3>IASTM</h3>
-          <p>Instrument-Assisted Soft Tissue Mobilization (IASTM) is a technique used to address soft-tissue restrictions and areas of muscular or connective-tissue tightness. It may be incorporated into physiotherapy treatment to support mobility and comfortable movement. At SJ Physiotherapy Clinic, IASTM is selected according to individual assessment findings and can be combined with exercise therapy and other rehabilitation techniques.</p>
-        </div>
-      </div>
 
       <div class="service-row">
         <div class="service-image">
@@ -911,6 +976,19 @@ body.menu-open { overflow: hidden; height: 100vh; }
         </div>
       </div>
 
+
+      <div class="service-row">
+        <div class="service-image">
+          <img src="assets/conditions/iastm.jpg" alt="IASTM" onerror="this.src='data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI4MDAiIGhlaWdodD0iNjAwIj48cmVjdCB3aWR0aD0iMTAwJSIgaGVpZ2h0PSIxMDAlIiBmaWxsPSIjZWVlZWVlIi8+PHRleHQgeD0iNTAlIiB5PSI1MCUiIGZvbnQtc2l6ZT0iMjQiIGZpbGw9IiM1NTUiIGR5PSIuM2VtIiB0ZXh0LWFuY2hvcj0ibWlkZGxlIj5JQVNUTSBJbWFnZTwvdGV4dD48L3N2Zz4='">
+        </div>
+        <div class="service-content">
+          <h3>IASTM</h3>
+          <p>Instrument-Assisted Soft Tissue Mobilization (IASTM) is a technique used to address soft-tissue restrictions and areas of muscular or connective-tissue tightness. It may be incorporated into physiotherapy treatment to support mobility and comfortable movement. At SJ Physiotherapy Clinic, IASTM is selected according to individual assessment findings and can be combined with exercise therapy and other rehabilitation techniques.</p>
+        </div>
+      </div>
+
+
+
       <div class="service-row">
         <div class="service-image">
           <img src="assets/conditions/kinesio-taping.jpg" alt="Kinesio Taping" onerror="this.src='data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI4MDAiIGhlaWdodD0iNjAwIj48cmVjdCB3aWR0aD0iMTAwJSIgaGVpZ2h0PSIxMDAlIiBmaWxsPSIjZWVlZWVlIi8+PHRleHQgeD0iNTAlIiB5PSI1MCUiIGZvbnQtc2l6ZT0iMjQiIGZpbGw9IiM1NTUiIGR5PSIuM2VtIiB0ZXh0LWFuY2hvcj0ibWlkZGxlIj5LaW5lc2lvIFRhcGluZyBJbWFnZTwvdGV4dD48L3N2Zz4='">
@@ -920,6 +998,21 @@ body.menu-open { overflow: hidden; height: 100vh; }
           <p>Kinesio taping is a supportive technique that uses specialized elastic tape applied to targeted areas of the body. It may be incorporated into physiotherapy programs to provide support during movement and complement rehabilitation exercises. At SJ Physiotherapy Clinic, taping is selected based on individual assessment and may be used alongside exercise therapy, manual therapy and functional rehabilitation.</p>
         </div>
       </div>
+
+
+      <div class="service-row">
+        <div class="service-image">
+          <img src="assets/conditions/Electrotherapy.jpg" alt="Electrotherapy" onerror="this.src='data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI4MDAiIGhlaWdodD0iNjAwIj48cmVjdCB3aWR0aD0iMTAwJSIgaGVpZ2h0PSIxMDAlIiBmaWxsPSIjZWVlZWVlIi8+PHRleHQgeD0iNTAlIiB5PSI1MCUiIGZvbnQtc2l6ZT0iMjQiIGZpbGw9IiM1NTUiIGR5PSIuM2VtIiB0ZXh0LWFuY2hvcj0ibWlkZGxlIj5LaW5lc2lvIFRhcGluZyBJbWFnZTwvdGV4dD48L3N2Zz4='">
+        </div>
+        <div class="service-content">
+          <h3>Electrotherapy</h3>
+          <p>Electrotherapy uses controlled electrical energy as part of physiotherapy treatment to help manage pain, support muscle activation and promote functional recovery. At SJ Physiotherapy Clinic, electrotherapy is selected according to the patient's condition, symptoms and treatment goals.
+
+Electrotherapy is generally combined with exercises, manual therapy, stretching and functional rehabilitation rather than being used as a stand-alone treatment. Treatment is customized based on individual assessment and clinical needs.</p>
+        </div>
+      </div>
+
+
 
       <div class="service-row">
         <div class="service-image">
@@ -941,35 +1034,34 @@ body.menu-open { overflow: hidden; height: 100vh; }
         </div>
       </div>
 
-      <div class="service-row">
-        <div class="service-image">
-          <img src="assets/conditions/ultrasound-therapy.jpg" alt="Ultrasound Therapy" onerror="this.src='data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI4MDAiIGhlaWdodD0iNjAwIj48cmVjdCB3aWR0aD0iMTAwJSIgaGVpZ2h0PSIxMDAlIiBmaWxsPSIjZWVlZWVlIi8+PHRleHQgeD0iNTAlIiB5PSI1MCUiIGZvbnQtc2l6ZT0iMjQiIGZpbGw9IiM1NTUiIGR5PSIuM2VtIiB0ZXh0LWFuY2hvcj0ibWlkZGxlIj5VbHRyYXNvdW5kIFRoZXJhcHkgSW1hZ2U8L3RleHQ+PC9zdmc+'">
-        </div>
-        <div class="service-content">
-          <h3>Ultrasound Therapy</h3>
-          <p>Ultrasound therapy is a physiotherapy modality that uses therapeutic sound waves and may be included in treatment for selected musculoskeletal conditions. It can form part of a broader rehabilitation program alongside other techniques. At SJ Physiotherapy Clinic, ultrasound therapy is used when clinically appropriate and combined with exercises, manual therapy and functional rehabilitation according to individual treatment needs.</p>
-        </div>
-      </div>
 
       <div class="service-row">
         <div class="service-image">
-          <img src="assets/conditions/tens.jpg" alt="TENS" onerror="this.src='data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI4MDAiIGhlaWdodD0iNjAwIj48cmVjdCB3aWR0aD0iMTAwJSIgaGVpZ2h0PSIxMDAlIiBmaWxsPSIjZWVlZWVlIi8+PHRleHQgeD0iNTAlIiB5PSI1MCUiIGZvbnQtc2l6ZT0iMjQiIGZpbGw9IiM1NTUiIGR5PSIuM2VtIiB0ZXh0LWFuY2hvcj0ibWlkZGxlIj5URU5TIEltYWdlPC90ZXh0Pjwvc3ZnPg=='">
+          <img src="assets/conditions/ergonomic-correction.jpg" alt="Ergonomic Correction" onerror="this.src='data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI4MDAiIGhlaWdodD0iNjAwIj48cmVjdCB3aWR0aD0iMTAwJSIgaGVpZ2h0PSIxMDAlIiBmaWxsPSIjZWVlZWVlIi8+PHRleHQgeD0iNTAlIiB5PSI1MCUiIGZvbnQtc2l6ZT0iMjQiIGZpbGw9IiM1NTUiIGR5PSIuM2VtIiB0ZXh0LWFuY2hvcj0ibWlkZGxlIj5Fcmdvbm9taWMgQ29ycmVjdGlvbiBJbWFnZTwvdGV4dD48L3N2Zz4='">
         </div>
         <div class="service-content">
-          <h3>TENS</h3>
-          <p>Transcutaneous Electrical Nerve Stimulation (TENS) is an electrotherapy technique that may be used as part of physiotherapy-based pain management. It delivers controlled electrical stimulation through electrodes placed on the skin. At SJ Physiotherapy Clinic, TENS may be incorporated into an individualized treatment plan alongside therapeutic exercises, manual therapy and patient education to support comfortable movement and rehabilitation.</p>
+          <h3>Ergonomic Correction</h3>
+          <p>Ergonomic training focuses on improving the way you sit, stand, move and perform daily work activities to reduce unnecessary stress on the body. At SJ Physiotherapy Clinic, we provide personalized ergonomic guidance based on your workplace, posture and daily routine.</p>
+          <p>Our ergonomic training includes:</p>
+          <ul>
+            <li>Workplace and posture assessment</li>
+            <li>Correct sitting and standing techniques</li>
+            <li>Proper desk, chair and monitor positioning</li>
+            <li>Keyboard and mouse positioning</li>
+            <li>Safe lifting and handling techniques</li>
+            <li>Workstation modifications</li>
+            <li>Stretching and movement breaks</li>
+            <li>Exercises to reduce neck, shoulder and back strain</li>
+            <li>Prevention of work-related musculoskeletal problems</li>
+            <li>Guidance for prolonged computer and mobile phone use</li>
+          </ul>
+          <p>The goal is to promote healthy movement habits, reduce discomfort, prevent injuries and improve comfort and productivity at work and home.</p>
         </div>
       </div>
 
-      <div class="service-row">
-        <div class="service-image">
-          <img src="assets/conditions/ift.jpg" alt="IFT" onerror="this.src='data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI4MDAiIGhlaWdodD0iNjAwIj48cmVjdCB3aWR0aD0iMTAwJSIgaGVpZ2h0PSIxMDAlIiBmaWxsPSIjZWVlZWVlIi8+PHRleHQgeD0iNTAlIiB5PSI1MCUiIGZvbnQtc2l6ZT0iMjQiIGZpbGw9IiM1NTUiIGR5PSIuM2VtIiB0ZXh0LWFuY2hvcj0ibWlkZGxlIj5JRlQgSW1hZ2U8L3RleHQ+PC9zdmc+'">
-        </div>
-        <div class="service-content">
-          <h3>IFT</h3>
-          <p>Interferential Therapy (IFT) is an electrotherapy modality that may be incorporated into physiotherapy treatment for selected musculoskeletal conditions. It uses electrical stimulation delivered through electrodes as part of a therapeutic program. At SJ Physiotherapy Clinic, IFT may be combined with manual therapy, exercise therapy and other rehabilitation approaches based on the patient's assessment, symptoms, functional limitations and recovery goals.</p>
-        </div>
-      </div>
+
+
+
 
       </div>
       </div>
@@ -1002,7 +1094,7 @@ body.menu-open { overflow: hidden; height: 100vh; }
                 <span class="accordion-icon" aria-hidden="true"></span>
               </button>
               <div class="accordion-body">
-                <p>A doctor's referral is not necessarily required for every physiotherapy consultation. You can contact SJ Physiotherapy Clinic directly for an assessment of your condition. However, if you have already been evaluated by a doctor or undergone surgery, bringing your medical reports and relevant recommendations can help the physiotherapist understand your condition and plan appropriate rehabilitation.</p>
+                <p>A doctor's referral is not necessarily required for every physiotherapy consultation. You can contact SJ Physiotherapy directly for an assessment of your condition. However, if you have already been evaluated by a doctor or undergone surgery, bringing your medical reports and relevant recommendations can help the physiotherapist understand your condition and plan appropriate rehabilitation.</p>
               </div>
             </div>
             <div class="accordion-item">
@@ -1029,7 +1121,7 @@ body.menu-open { overflow: hidden; height: 100vh; }
                 <span class="accordion-icon" aria-hidden="true"></span>
               </button>
               <div class="accordion-body">
-                <p>Yes, SJ Physiotherapy Clinic provides home physiotherapy services for patients who may have difficulty travelling to the clinic. Home visits can be suitable for elderly patients, post-surgical patients, bedridden patients, neurological conditions and individuals with limited mobility. Treatment is planned according to the patient's condition and may include mobility, strengthening, balance and functional rehabilitation.</p>
+                <p>Yes, SJ Physiotherapy provides home physiotherapy services for patients who may have difficulty travelling to the clinic. Home visits can be suitable for elderly patients, post-surgical patients, bedridden patients, neurological conditions and individuals with limited mobility. Treatment is planned according to the patient's condition and may include mobility, strengthening, balance and functional rehabilitation.</p>
               </div>
             </div>
             <div class="accordion-item">
@@ -1038,7 +1130,7 @@ body.menu-open { overflow: hidden; height: 100vh; }
                 <span class="accordion-icon" aria-hidden="true"></span>
               </button>
               <div class="accordion-body">
-                <p>Yes. SJ Physiotherapy Clinic provides sports rehabilitation for conditions such as ligament injuries, muscle strains, tendon injuries, ACL injuries and rotator cuff injuries. Rehabilitation may include manual therapy, strengthening, balance training, functional exercises and sport-specific rehabilitation. Programs are designed to help athletes restore movement, strength, confidence and function before gradually returning to their sport.</p>
+                <p>Yes. SJ Physiotherapy provides sports rehabilitation for conditions such as ligament injuries, muscle strains, tendon injuries, ACL injuries and rotator cuff injuries. Rehabilitation may include manual therapy, strengthening, balance training, functional exercises and sport-specific rehabilitation. Programs are designed to help athletes restore movement, strength, confidence and function before gradually returning to their sport.</p>
               </div>
             </div>
             <div class="accordion-item">
@@ -1047,7 +1139,7 @@ body.menu-open { overflow: hidden; height: 100vh; }
                 <span class="accordion-icon" aria-hidden="true"></span>
               </button>
               <div class="accordion-body">
-                <p>Yes. SJ Physiotherapy Clinic provides geriatric physiotherapy to help older adults maintain mobility, strength, balance and independence. Treatment may include balance training, fall prevention, walking training, arthritis management, strengthening and mobility exercises. Rehabilitation is individualized according to each person's physical abilities and goals, with an emphasis on safer movement and maintaining independence in daily activities.</p>
+                <p>Yes. SJ Physiotherapy provides geriatric physiotherapy to help older adults maintain mobility, strength, balance and independence. Treatment may include balance training, fall prevention, walking training, arthritis management, strengthening and mobility exercises. Rehabilitation is individualized according to each person's physical abilities and goals, with an emphasis on safer movement and maintaining independence in daily activities.</p>
               </div>
             </div>
             <div class="accordion-item">
@@ -1056,7 +1148,7 @@ body.menu-open { overflow: hidden; height: 100vh; }
                 <span class="accordion-icon" aria-hidden="true"></span>
               </button>
               <div class="accordion-body">
-                <p>Yes. SJ Physiotherapy Clinic provides specialized women's health physiotherapy for pregnancy-related physical concerns including low back pain. Treatment may include safe exercises, mobility work, posture guidance, strengthening and movement education. Programs are individually adapted according to the woman's stage of pregnancy and physical needs, with the aim of supporting comfortable movement and physical well-being.</p>
+                <p>Yes. SJ Physiotherapy provides specialized women's health physiotherapy for pregnancy-related physical concerns including low back pain. Treatment may include safe exercises, mobility work, posture guidance, strengthening and movement education. Programs are individually adapted according to the woman's stage of pregnancy and physical needs, with the aim of supporting comfortable movement and physical well-being.</p>
               </div>
             </div>
             <div class="accordion-item">
@@ -1099,10 +1191,9 @@ body.menu-open { overflow: hidden; height: 100vh; }
           <h4>Our Services</h4>
           <ul>
             <li>* Orthopaedic Rehab</a></li>
-            <li>* Sports Injury Clinic</a></li>
+            <li>* Sports Injury </a></li>
             <li>* Women's Health</a></li>
             <li>* Manual Therapy</a></li>
-            <li>* Dry Needling</a></li>
           </ul>
         </div>
 
@@ -1110,9 +1201,9 @@ body.menu-open { overflow: hidden; height: 100vh; }
           <h4>Quick Links</h4>
           <ul>
             <li><a href="index.html">* Home</a></li>
-            <li><a href="about.html">* About Us</a></li>
+            <li><a href="about-us.html">* About Us</a></li>
             <li><a href="resources.html">* Resources</a></li>
-            <li><a href="contact.html">* Contact Us</a></li>
+            <li><a href="contact-us.html">* Contact Us</a></li>
           </ul>
         </div>
 
@@ -1199,6 +1290,35 @@ body.menu-open { overflow: hidden; height: 100vh; }
       });
     });
   </script>
+
+
+
+
+
+<script>
+  (function () {
+    var overlay = document.getElementById('introVideoOverlay');
+    var video = document.getElementById('introVideo');
+
+    // pick video by screen width: 600px and below = phone video
+    var isMobile = window.innerWidth <= 600;
+    video.src = isMobile ? 'LOGO/SJ Intro Video Phone.mp4' : 'LOGO/SJ Intro Video.mp4';
+    if (!isMobile) { video.classList.add('trim-edge'); }
+
+    document.body.classList.add('intro-locked');
+    video.play().catch(function () {});
+
+    function endIntro() {
+      overlay.style.display = 'none';
+      document.body.classList.remove('intro-locked');
+    }
+
+    video.addEventListener('ended', endIntro);
+    setTimeout(endIntro, 5000); // safety fallback in case video doesn't fire 'ended'
+  })();
+</script>
+</body>
+
 
 </body>
 </html>
