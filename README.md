@@ -6,7 +6,7 @@ SJ Physiotherapy offers specialized treatments for below mentioned medical condi
 * **Geriatric Physiotherapy** - Balance Disorders, Vertigo Rehabilitation, Postural Dysfunctions, Balance Training, Fall Prevention, Fall Prevention Pain, Arthritis, Muscle Weakness, Mobility Issues.
 * **Women's Health Services** - Pregnancy-Related Pain, Postpartum Recovery, Pregnancy Exercise Programs, Postpartum Rehabilitation, Diastasis Recti, Pelvic Floor Muscle Training, Urinary Incontinence, Low Back Pain During Pregnancy, Post-Caesarean Rehabilitation and Pain Management.
 
-**They used these Treatment Techniques to treat their clients:** 
+**They uses these Treatment Techniques to treat their clients:** 
 * Myofascial Release
 * Strength and Conditioning
 * Functional Training
