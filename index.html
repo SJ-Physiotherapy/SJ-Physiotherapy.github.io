@@ -73,7 +73,7 @@ body.menu-open { overflow: hidden; height: 100vh; }
 
 .main-header { background: linear-gradient(135deg, #2778b7 0%, #a8d339 100%); box-shadow: 0 2px 15px rgba(0,0,0,.05); position: sticky; top: 0; z-index: 900; width: 100%; }
 .header-inner { display: flex; justify-content: space-between; align-items: center; height: 120px; padding: 10px 10px;}
-.logo { display: flex; align-items: center; flex-shrink: 0; max-width: 60%;}
+.logo { display: flex; align-items: center; flex-shrink: 0; max-width: 70%;}
 .logo img { height: 120px; width: auto; object-fit: contain; filter: drop-shadow(1px 0px 0px #ffffff) drop-shadow(-1px 0px 0px #ffffff) drop-shadow(0px 1px 0px #ffffff) drop-shadow(0px -1px 0px #ffffff) drop-shadow(1px 1px 0px #ffffff) drop-shadow(-1px -1px 0px #ffffff) drop-shadow(1px -1px 0px #ffffff) drop-shadow(-1px 1px 0px #ffffff) drop-shadow(0px 0px 2px #ffffff);}
 .nav-wrapper { flex: 1; display: flex; justify-content: flex-end;}
 .nav-links { display: flex; align-items: center; gap: 32px;}
@@ -174,10 +174,11 @@ body.menu-open { overflow: hidden; height: 100vh; }
 
 {
 .service-row {margin-bottom: 20px;}
-.service-image { width: 100%; margin-bottom: 10px; }
-.service-image img { height: 220px; }
-.service-content h3 {font-size: 20px;}
-.service-content p {font-size: 14px;}
+.service-row:not(.techniques-division .service-row) > .service-content { display: contents; }
+.service-content h3 { order: 1; font-size: 20px; margin-bottom: 5px; }
+.service-image { order: 2; width: 100%; margin-bottom: 5px; max-width: 220px; margin-left: auto; margin-right: auto; }
+.service-image img { height: 200px; }
+.service-content p { order: 3; font-size: 14px; text-align: center;}
 .service-list li {font-size: 14px;}
 .service-list li::before {font-size: 10px; width: 15px; height: 15px;}
     
@@ -353,11 +354,13 @@ body.menu-open { overflow: hidden; height: 100vh; }
 {
 
 .techniques-grid { grid-template-columns: 1fr; gap: 18px; }
-.techniques-division .service-image img { height: 210px; }
-.techniques-division .service-content { padding: 16px 18px 20px; }
-.techniques-division .service-content h3 { font-size: 19px; margin-bottom: 8px; }
-.techniques-division .service-content p { font-size: 14px; }
-.techniques-division .service-content ul { font-size: 14px; }
+.techniques-division .service-content { display: contents; padding: 18px 22px 24px; }
+.techniques-division .service-content h3 { order: 1; font-size: 19px; text-align: center; margin-bottom: 8px; padding: 0 22px; margin-top: 18px; }
+.techniques-division .service-image { order: 2; margin-bottom: 16px; }
+.techniques-division .service-image img { height: 210px; padding: 2px; }
+.techniques-division .service-content p { order: 3; font-size: 14px; padding: 0 22px 24px; text-align: center;}
+.techniques-division .service-content p:last-of-type { order: 5; }
+.techniques-division .service-content ul { order: 4; font-size: 14px; padding: 0 22px 24px 42px; }
   
 }
 
@@ -445,7 +448,7 @@ body.intro-locked { overflow: hidden; height: 100vh; }
     <div class="container">
       <h1>Welcome to Our Specialized Services</h1>
       <p class="hero-content">
-        Welcome to our clinic, where your movement, vitality and well-being are our absolute priorities. We believe in a holistic, patient-centered approach to physiotherapy, dedicated to helping you overcome pain, recover from injuries and achieve peak physical performance. Whether you are an athlete looking to safely return to your sport, an office professional dealing with repetitive strain or an expectant mother seeking specialized pelvic health support, our expert team is here to guide your recovery. We combine evidence-based practices, advanced manual therapy techniques and personalized exercise programs to address the root cause of your discomfort—not just the symptoms. Explore our specialized services below and take the first empowered step toward a stronger, healthier and pain-free life.
+        Welcome to our clinic, where your movement, vitality and well-being are our absolute priorities. We believe in a holistic, patient-centered approach to physiotherapy, dedicated to helping you overcome pain, recover from injuries and achieve peak physical performance. Whether you are an athlete looking to safely return to your sport, an office professional dealing with repetitive strain or an expectant mother seeking specialized pelvic health support, our expert team is here to guide your recovery. We combine evidence-based practices, advanced manual therapy techniques and personalized exercise programs to address the root cause of your discomfort - not just the symptoms. Explore our specialized services below and take the first empowered step toward a stronger, healthier and pain-free life.
       </p>
     </div>
   </section>
@@ -515,7 +518,7 @@ body.intro-locked { overflow: hidden; height: 100vh; }
 
       <div class="service-row">
         <div class="service-image">
-          <img src="assets/conditions/frozen-shoulder.jpg" alt="Frozen Shoulder" >
+          <img src="IMAGES/Frozen shoulder.jpg" alt="Frozen Shoulder" >
         </div>
         <div class="service-content">
           <h3>Frozen Shoulder</h3>
@@ -615,7 +618,7 @@ body.intro-locked { overflow: hidden; height: 100vh; }
 
       <div class="service-row">
         <div class="service-image">
-          <img src="assets/conditions/osteoarthritis.jpg" alt="Osteoarthritis">
+          <img src="IMAGES/Osteoarthritis.jpg" alt="Osteoarthritis">
         </div>
         <div class="service-content">
           <h3>Osteoarthritis</h3>
@@ -637,7 +640,7 @@ body.intro-locked { overflow: hidden; height: 100vh; }
 
       <div class="service-row">
         <div class="service-image">
-          <img src="assets/conditions/osteoarthritis.jpg" alt="Osteoarthritis">
+          <img src="IMAGES/Post surgical Rehab.jpg" alt="Post-Surgical Rehabilitation">
         </div>
         <div class="service-content">
           <h3>Post-Surgical Rehabilitation</h3>
@@ -654,7 +657,7 @@ body.intro-locked { overflow: hidden; height: 100vh; }
         <div class="condition-panel" id="tab-sports" role="tabpanel">
         <div class="service-row">
         <div class="service-image">
-          <img src="assets/conditions/ligament-injury.jpg" alt="Ligament Injury">
+          <img src="IMAGES/Ligament injury.jpg" alt="Ligament Injury">
         </div>
         <div class="service-content">
           <h3>Ligament Injury</h3>
@@ -664,7 +667,7 @@ body.intro-locked { overflow: hidden; height: 100vh; }
 
       <div class="service-row">
         <div class="service-image">
-          <img src="assets/conditions/meniscus-injury.jpg" alt="Meniscus Injury" >
+          <img src="IMAGES/Meniscus injury.jpg" alt="Meniscus Injury" >
         </div>
         <div class="service-content">
           <h3>Meniscus Injury</h3>
@@ -674,7 +677,7 @@ body.intro-locked { overflow: hidden; height: 100vh; }
 
       <div class="service-row">
         <div class="service-image">
-          <img src="assets/conditions/ankle-sprain.jpg" alt="Ankle Sprain" >
+          <img src="IMAGES/Ankle sprain.jpg" alt="Ankle Sprain" >
         </div>
         <div class="service-content">
           <h3>Ankle Sprain</h3>
@@ -684,7 +687,7 @@ body.intro-locked { overflow: hidden; height: 100vh; }
 
       <div class="service-row">
         <div class="service-image">
-          <img src="assets/conditions/achilles-tendinitis.jpg" alt="Achilles Tendinitis" >
+          <img src="IMAGES/Achilles tendinitis.jpg" alt="Achilles Tendinitis" >
         </div>
         <div class="service-content">
           <h3>Achilles Tendinitis</h3>
@@ -694,7 +697,7 @@ body.intro-locked { overflow: hidden; height: 100vh; }
 
       <div class="service-row">
         <div class="service-image">
-          <img src="assets/conditions/muscle-strain.jpg" alt="Muscle Strain" >
+          <img src="IMAGES/Muscle strain.jpg" alt="Muscle Strain" >
         </div>
         <div class="service-content">
           <h3>Muscle Strain</h3>
@@ -706,7 +709,7 @@ body.intro-locked { overflow: hidden; height: 100vh; }
         <div class="condition-panel" id="tab-womens" role="tabpanel">
       <div class="service-row">
         <div class="service-image">
-          <img src="assets/conditions/pregnancy-related-pain.jpg" alt="Pregnancy-Related Pain">
+          <img src="IMAGES/Pregnancy related pain.jpg" alt="Pregnancy-Related Pain">
         </div>
         <div class="service-content">
           <h3>Pregnancy-Related Pain</h3>
@@ -716,7 +719,7 @@ body.intro-locked { overflow: hidden; height: 100vh; }
 
       <div class="service-row">
         <div class="service-image">
-          <img src="assets/conditions/postpartum-recovery.jpg" alt="Postpartum Recovery" >
+          <img src="IMAGES/Postpartum recovery.jpg" alt="Postpartum Recovery" >
         </div>
         <div class="service-content">
           <h3>Postpartum Recovery</h3>
@@ -726,7 +729,7 @@ body.intro-locked { overflow: hidden; height: 100vh; }
 
       <div class="service-row">
         <div class="service-image">
-          <img src="assets/conditions/pregnancy-exercise-programs.jpg" alt="Pregnancy Exercise Programs" >
+          <img src="IMAGES/Pregancy exercise program.jpg" alt="Pregnancy Exercise Programs" >
         </div>
         <div class="service-content">
           <h3>Pregnancy Exercise Programs</h3>
@@ -736,7 +739,7 @@ body.intro-locked { overflow: hidden; height: 100vh; }
 
       <div class="service-row">
         <div class="service-image">
-          <img src="assets/conditions/postpartum-rehabilitation.jpg" alt="Postpartum Rehabilitation">
+          <img src="IMAGES/Postpartum rehabilitation.jpg" alt="Postpartum Rehabilitation">
         </div>
         <div class="service-content">
           <h3>Postpartum Rehabilitation</h3>
@@ -746,7 +749,7 @@ body.intro-locked { overflow: hidden; height: 100vh; }
 
       <div class="service-row">
         <div class="service-image">
-          <img src="assets/conditions/diastasis-recti.jpg" alt="Diastasis Recti">
+          <img src="IMAGES/Diastasis recti.jpg" alt="Diastasis Recti">
         </div>
         <div class="service-content">
           <h3>Diastasis Recti</h3>
@@ -756,7 +759,7 @@ body.intro-locked { overflow: hidden; height: 100vh; }
 
       <div class="service-row">
         <div class="service-image">
-          <img src="assets/conditions/pelvic-floor-muscle-training.jpg" alt="Pelvic Floor Muscle Training">
+          <img src="IMAGES/Pelvic floor rehab.jpg" alt="Pelvic Floor Muscle Training">
         </div>
         <div class="service-content">
           <h3>Pelvic Floor Muscle Training</h3>
@@ -766,7 +769,7 @@ body.intro-locked { overflow: hidden; height: 100vh; }
 
       <div class="service-row">
         <div class="service-image">
-          <img src="assets/conditions/urinary-incontinence.jpg" alt="Urinary Incontinence">
+          <img src="IMAGES/Urinary incontinence.jpg" alt="Urinary Incontinence">
         </div>
         <div class="service-content">
           <h3>Urinary Incontinence</h3>
@@ -776,7 +779,7 @@ body.intro-locked { overflow: hidden; height: 100vh; }
 
       <div class="service-row">
         <div class="service-image">
-          <img src="assets/conditions/low-back-pain-during-pregnancy.jpg" alt="Low Back Pain During Pregnancy" >
+          <img src="IMAGES/Lowbackpain pregnancy.jpg" alt="Low Back Pain During Pregnancy" >
         </div>
         <div class="service-content">
           <h3>Low Back Pain During Pregnancy</h3>
@@ -786,7 +789,7 @@ body.intro-locked { overflow: hidden; height: 100vh; }
 
       <div class="service-row">
         <div class="service-image">
-          <img src="assets/conditions/post-caesarean-rehabilitation.jpg" alt="Post-Caesarean Rehabilitation">
+          <img src="IMAGES/Post cesarean rehab.jpg" alt="Post-Caesarean Rehabilitation">
         </div>
         <div class="service-content">
           <h3>Post-Caesarean Rehabilitation</h3>
@@ -808,7 +811,7 @@ body.intro-locked { overflow: hidden; height: 100vh; }
         <div class="condition-panel" id="tab-geriatric" role="tabpanel">
       <div class="service-row">
         <div class="service-image">
-          <img src="assets/conditions/balance-disorders.jpg" alt="Balance Disorders" >
+          <img src="IMAGES/Balance disorders.jpg" alt="Balance Disorders" >
         </div>
         <div class="service-content">
           <h3>Balance Disorders</h3>
@@ -828,7 +831,7 @@ body.intro-locked { overflow: hidden; height: 100vh; }
 
       <div class="service-row">
         <div class="service-image">
-          <img src="assets/conditions/postural-problems.jpg" alt="Postural Problems">
+          <img src="IMAGES/Posture correction .jpg" alt="Postural Problems">
         </div>
         <div class="service-content">
           <h3>Postural Dysfunctions</h3>
@@ -848,7 +851,7 @@ body.intro-locked { overflow: hidden; height: 100vh; }
 
       <div class="service-row">
         <div class="service-image">
-          <img src="assets/conditions/fall-prevention.jpg" alt="Fall Prevention">
+          <img src="IMAGES/Fall prevention.jpg" alt="Fall Prevention">
         </div>
         <div class="service-content">
           <h3>Fall Prevention</h3>
@@ -858,7 +861,7 @@ body.intro-locked { overflow: hidden; height: 100vh; }
 
       <div class="service-row">
         <div class="service-image">
-          <img src="assets/conditions/walking-training.jpg" alt="Walking Training">
+          <img src="IMAGES/Walking training.jpg" alt="Walking Training">
         </div>
         <div class="service-content">
           <h3>Walking Training</h3>
@@ -878,7 +881,7 @@ body.intro-locked { overflow: hidden; height: 100vh; }
 
       <div class="service-row">
         <div class="service-image">
-          <img src="assets/conditions/strength-improvement.jpg" alt="Strength Improvement">
+          <img src="IMAGES/Strength and conditioning.jpg" alt="Strength Improvement">
         </div>
         <div class="service-content">
           <h3>Strength Training</h3>
@@ -888,7 +891,7 @@ body.intro-locked { overflow: hidden; height: 100vh; }
 
       <div class="service-row">
         <div class="service-image">
-          <img src="assets/conditions/mobility-enhancement.jpg" alt="Mobility Enhancement">
+          <img src="IMAGES/Mobility enhancement.jpg" alt="Mobility Enhancement">
         </div>
         <div class="service-content">
           <h3>Mobility Enhancement</h3>
@@ -915,7 +918,7 @@ body.intro-locked { overflow: hidden; height: 100vh; }
 
       <div class="service-row">
         <div class="service-image">
-          <img src=" " alt="Myofascial Release">
+          <img src="IMAGES/Myofascial release.jpg" alt="Myofascial Release">
         </div>
         <div class="service-content">
           <h3>Myofascial Release</h3>
@@ -926,7 +929,7 @@ body.intro-locked { overflow: hidden; height: 100vh; }
 
       <div class="service-row">
         <div class="service-image">
-          <img src="assets/conditions/strengthening.jpg" alt="Strengthening">
+          <img src="IMAGES/Core strengthening .jpg" alt="Strengthening">
         </div>
         <div class="service-content">
           <h3>Strength and Conditioning</h3>
@@ -936,7 +939,7 @@ body.intro-locked { overflow: hidden; height: 100vh; }
 
       <div class="service-row">
         <div class="service-image">
-          <img src="assets/conditions/functional-training.jpg" alt="Functional Training">
+          <img src="IMAGES/Functional training.jpg" alt="Functional Training">
         </div>
         <div class="service-content">
           <h3>Functional Training</h3>
@@ -947,7 +950,7 @@ body.intro-locked { overflow: hidden; height: 100vh; }
 
       <div class="service-row">
         <div class="service-image">
-          <img src="assets/conditions/biomechanical-correction.jpg" alt="Biomechanical Correction">
+          <img src="IMAGES/Biomechanical correction.jpg" alt="Biomechanical Correction">
         </div>
         <div class="service-content">
           <h3>Biomechanical Correction</h3>
@@ -958,7 +961,7 @@ body.intro-locked { overflow: hidden; height: 100vh; }
 
       <div class="service-row">
         <div class="service-image">
-          <img src="assets/conditions/core-stability-training.jpg" alt="Core Stability Training">
+          <img src="IMAGES/Core stability.jpg" alt="Core Stability Training">
         </div>
         <div class="service-content">
           <h3>Core Stability Training</h3>
@@ -1234,10 +1237,12 @@ Electrotherapy is generally combined with exercises, manual therapy, stretching 
       
      
       <div class="social-list" style="justify-content: center; margin-bottom: 10px;">
-        <a href="#" class="social-icon" aria-label="Instagram"><img src="SOCIAL MEDIA/INSTA.png" alt="Instagram"></a>
-        <a href="#" class="social-icon" aria-label="Facebook"><img src="SOCIAL MEDIA/FACEBOOK.png" alt="Facebook"></a>
-        <a href="#" class="social-icon" aria-label="Mail"><img src="SOCIAL MEDIA/MAIL.png" alt="Mail"></a>
-        <a href="#" class="social-icon" aria-label="YouTube"><img src="SOCIAL MEDIA/YOUTUBE.png" alt="YouTube"></a>
+        <a href="tel:+919629495946" class="social-icon" aria-label="Phone"><img src="SOCIAL MEDIA/PHONE.png" alt="Phone"></a>
+        <a href="mailto:info.sjphysiotherapy@gmail.com" class="social-icon" aria-label="Mail"><img src="SOCIAL MEDIA/MAIL.png" alt="Mail"></a>
+        <a href="https://www.linkedin.com/company/sj-physiotherapy/" target="_blank" rel="noopener" class="social-icon" aria-label="LinkedIn"><img src="SOCIAL MEDIA/LINKEDIN.png" alt="LinkedIn"></a>
+        <a href="#" class="social-icon" target="_blank" rel="noopener" aria-label="Instagram"><img src="SOCIAL MEDIA/INSTA.png" alt="Instagram"></a>
+        <a href="#" class="social-icon" target="_blank" rel="noopener" aria-label="Facebook"><img src="SOCIAL MEDIA/FACEBOOK.png" alt="Facebook"></a>
+        <a href="https://www.youtube.com/@SJ-Physiotherapy" target="_blank" rel="noopener" class="social-icon" aria-label="YouTube"><img src="SOCIAL MEDIA/YOUTUBE.png" alt="YouTube"></a>
       </div>
       <p style="text-align: center; color: #ffffff; font-family: Georgia, 'Times New Roman', Times, serif; font-size: 16px; margin-bottom: 20px;"><b>Connect With Us</b></p>
 
