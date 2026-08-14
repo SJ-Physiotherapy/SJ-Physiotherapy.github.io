@@ -23,5 +23,7 @@ SJ Physiotherapy offers specialized treatments for below mentioned medical condi
 * Ergonomic Correction Training
 
 **Their clinic located** @ SJ Physiotherapy, No - 243, Ground floor, Analyangadu Extension Main Road,  Singanallur, Coimbatore - 641005<br>
-**Contact** - +91 96294 95946<br>
-**Email:** Info.sjphysiotherapy@gmail.com
+**Contact** - +91 96294 95946 <br>
+**Email:** Info.sjphysiotherapy@gmail.com <br>
+**LinkedIn:** https://www.linkedin.com/company/sj-physiotherapy/ <br>
+**YouTube:** https://www.youtube.com/@SJ-Physiotherapy <br>
