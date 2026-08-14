@@ -118,8 +118,8 @@ body.menu-open { overflow: hidden; height: 100vh; }
      3. HERO / WELCOME SECTION
 ============================================================ */
     
-.hero { background: linear-gradient(135deg, #2778b7 0%, #a8d339 100%), url('assets/hero-bg.jpg') center/cover no-repeat; color: #ffffff; padding: clamp(40px, 8vw, 50px) 0 40px 0; text-align: center; width: 100%; }
-.hero h1 { font-size: 40px; font-weight: 800; margin-bottom: 24px; letter-spacing: -0.5px; line-height: 1.2;}
+.hero { background: linear-gradient(135deg, #2778b7 0%, #a8d339 100%); color: #ffffff; padding: clamp(30px, 8vw, 30px) 0 30px 0; text-align: center; width: 100%; }
+.hero h1 { font-size: 40px; font-weight: 800; font-family: Georgia, 'Times New Roman', Times, serif; margin-bottom: 24px; letter-spacing: -0.5px; line-height: 1.2;}
 .hero-content { font-family: Georgia, 'Times New Roman', Times, serif; margin: 0 auto; font-size: 18px; line-height: 1.8; color: rgba(255, 255, 255, 0.95); padding: 0 10px;}
 
 
@@ -128,11 +128,97 @@ body.menu-open { overflow: hidden; height: 100vh; }
 {
 
 .hero h1 { font-size: 22px;}
-.hero-content {font-size: 14px;}
+.hero-content {font-size: 14px; padding: 0 5px;}
     
 }
 
 
+
+
+
+/* ============================================================
+     4. CONTACT SECTION
+============================================================ */
+
+.contact-section { padding: clamp(50px, 8vw, 80px) 0; background-color: #ffffff; width: 100%; }
+.contact-grid { display: grid; grid-template-columns: 1fr 1.15fr; gap: 50px; align-items: start; }
+
+/* ---- Left Column: Contact Info ---- */
+.contact-info { display: flex; flex-direction: column; gap: 40px; }
+.info-block-icon { width: 68px; height: 68px; border-radius: 50%; background: linear-gradient(135deg, #2778b7 0%, #a8d339 100%); display: flex; align-items: center; justify-content: center; margin-bottom: 18px; box-shadow: 0 8px 20px rgba(14,66,140,.2); }
+.info-block-icon svg { width: 32px; height: 32px; fill: #ffffff; }
+.info-block h3 { font-family: Georgia, 'Times New Roman', Times, serif; font-size: 22px; font-weight: 700; color: #0e428c; margin-bottom: 14px; position: relative; padding-bottom: 12px; }
+.info-block h3::after { content: ''; position: absolute; left: 0; bottom: 0; width: 46px; height: 3px; border-radius: 3px; background: linear-gradient(90deg, #2778b7, #a8d339); }
+.info-block p { font-family: Georgia, 'Times New Roman', Times, serif; font-size: 16px; line-height: 1.8; color: #424242; margin-bottom: 6px; }
+.info-block p a { color: #2778b7; font-weight: 700; transition: color .3s; }
+.info-block p a:hover { color: #0e428c; }
+.info-badge { display: inline-block; font-family: 'Segoe UI', system-ui, sans-serif; font-size: 14px; font-weight: 700; letter-spacing: .3px; color: #ffffff; background: #2778b7; padding: 5px 14px; border-radius: 20px; margin-bottom: 10px; }
+.contact-icon-row { display: flex; align-items: center; gap: 14px; margin-top: 12px; }
+.contact-icon-btn { width: 44px; height: 44px; flex-shrink: 0; border-radius: 50%; background: #2778b7; display: flex; align-items: center; justify-content: center; box-shadow: 0 6px 16px rgba(14,66,140,.2); transition: transform .25s ease, box-shadow .25s ease; }
+.contact-icon-btn svg { width: 20px; height: 20px; fill: #ffffff; }
+.contact-icon-btn:hover { transform: translateY(-3px); box-shadow: 0 10px 22px rgba(14,66,140,.3); }
+
+/* ---- Right Column: Inquiry Form Card ---- */
+.form-card { background: #ffffff; border: 1px solid #e6ebf0; border-radius: 16px; padding: clamp(26px, 4vw, 46px); box-shadow: 0 12px 40px rgba(14,66,140,.1); position: relative; overflow: hidden; }
+.form-card::before { content: ''; position: absolute; top: 0; left: 0; right: 0; height: 6px; background: linear-gradient(135deg, #2778b7 0%, #a8d339 100%); }
+.form-title { font-family:Georgia, 'Times New Roman', Times, serif; font-size: 24px; font-weight: 700; color: #0e428c; text-align: center; margin-bottom: 30px; }
+.contact-form { display: flex; flex-direction: column; gap: 20px; }
+.form-field label { display: block; font-family: 'Segoe UI', system-ui, sans-serif; font-weight: 700; font-size: 15px; color: #0e428c; margin-bottom: 8px; }
+.form-field label .required { color: #d64545; }
+.form-field input, .form-field textarea { width: 100%; box-sizing: border-box; padding: 13px 16px; border-radius: 10px; border: 1.5px solid #dfe3e8; background: #f8fafb; font-family: 'Segoe UI', system-ui, sans-serif; font-size: 12px; color: #6b6b6b; outline: none; transition: border-color .25s, box-shadow .25s, background .25s; }
+.form-field input:focus, .form-field textarea:focus { border-color: #27b72e; background: #ffffff; box-shadow: 0 0 0 4px rgba(80, 183, 39, 0.499); }
+.form-field input::placeholder, .form-field textarea::placeholder { font-size: 12px; color: #c6c6c6; opacity: 1; }
+.form-field textarea { min-height: 130px; resize: vertical; line-height: 1.6; }
+.field-help { font-size: 11px; font-family: 'Segoe UI', system-ui, sans-serif; font-weight: 600; color: #8a8a8a; min-height: 16px; margin-top: 6px; }
+.field-help.error { color: #d64545; }
+.input-error { border-color: #d64545 !important; box-shadow: 0 0 0 4px rgba(214,69,69,.1) !important; }
+.char-row { display: flex; justify-content: space-between; align-items: center; gap: 10px; margin-top: 6px; }
+.char-counter { font-size: 12.5px; font-weight: 600; color: #8a8a8a; }
+
+/* ---- Submit / Status / Success ---- */
+.form-actions { display: flex; flex-direction: column; align-items: center; gap: 14px; margin-top: 8px; }
+.btn-submit { padding: 14px 48px; border-radius: 30px; border: 0; cursor: pointer; font-weight: 700; font-size: 16px; letter-spacing: .3px; color: #ffffff; background: linear-gradient(135deg, #2778b7 0%, #a8d339 100%); box-shadow: 0 10px 24px rgba(39,120,183,.3); transition: transform .25s ease, box-shadow .25s ease, opacity .25s ease; }
+.btn-submit:hover:not([disabled]) { transform: translateY(-3px); box-shadow: 0 14px 30px rgba(39,120,183,.4); }
+.btn-submit[disabled] { opacity: .75; cursor: default; transform: none; }
+.btn-submit.btn-success { background: linear-gradient(135deg, #4caf50 0%, #a8d339 100%); }
+.spinner { width: 16px; height: 16px; display: inline-block; border: 2px solid rgba(255,255,255,.4); border-top-color: #ffffff; border-radius: 50%; animation: spin .8s linear infinite; vertical-align: middle; margin-right: 8px; }
+@keyframes spin { to { transform: rotate(360deg); } }
+.form-status { font-size: 13.5px; font-weight: 600; min-height: 18px; text-align: center; }
+.success-badge { display: none; align-items: center; flex-direction: column; gap: 10px; text-align: center; }
+.success-badge.show { display: flex; animation: popIn .5s ease; }
+.success-check { width: 62px; height: 62px; border-radius: 50%; background: #2778b7; display: flex; align-items: center; justify-content: center; box-shadow: 0 8px 20px rgba(39,120,183,.3); }
+.success-check svg { width: 20px; height: 20px; fill: none; stroke: #ffffff; stroke-width: 3; stroke-linecap: round; stroke-linejoin: round; }
+.success-badge span { font-family: Georgia, 'Times New Roman', Times, serif; font-size: 15px; font-weight: 700; color: #0e428c; }
+@keyframes popIn { from { transform: scale(.8); opacity: 0; } to { transform: scale(1); opacity: 1; } }
+
+
+@media (max-width: 900px)
+
+{
+
+.contact-grid { grid-template-columns: 1fr; gap: 44px; }
+.contact-info { align-items: center; text-align: center; }
+.info-block h3::after { left: 50%; transform: translateX(-50%); }
+.info-block-icon { margin-left: auto; margin-right: auto; }
+.contact-icon-row { justify-content: center; }
+
+}
+
+
+@media (max-width: 600px)
+
+{
+
+.contact-section { padding: 40px 0; }
+.form-card { padding: 24px 18px; border-radius: 12px; }
+.form-title { font-size: 19px; margin-bottom: 22px; }
+.info-block h3 { font-size: 19px; }
+.info-block p { font-size: 14.5px; }
+.info-block-icon { width: 58px; height: 58px; }
+.info-block-icon svg { width: 26px; height: 26px; }
+.btn-submit { width: 100%; padding: 13px; }
+
+}
 
 
 
@@ -244,7 +330,95 @@ body.menu-open { overflow: hidden; height: 100vh; }
   <main>
     <section class="contact-section">
       <div class="container">
-        <!-- CONTACT US CONTENT GOES HERE -->
+        <div class="contact-grid">
+
+          <!-- LEFT: Contact Info -->
+          <div class="contact-info">
+
+            <div class="info-block">
+              <div class="info-block-icon">
+                <svg viewBox="0 0 24 24"><path d="M4 22V4a1 1 0 0 1 1-1h9a1 1 0 0 1 1 1v4h4a1 1 0 0 1 1 1v13h-6v-4h-4v4H4zm2-2h2v-2H6v2zm0-4h2v-2H6v2zm0-4h2V10H6v2zm0-4h2V6H6v2zm4 12h2v-2h-2v2zm0-4h2v-2h-2v2zm0-4h2V10h-2v2zm0-4h2V6h-2v2zm6 12h2v-2h-2v2zm0-4h2v-2h-2v2z"/></svg>
+              </div>
+              <h3>Our Clinic</h3>
+              <p>SJ Physiotherapy<br>No - 243, Ground floor,<br>Analyangadu Extension Main Road,<br>Singanallur, Coimbatore - 641005</p>
+            </div>
+
+            <div class="info-block">
+              <div class="info-block-icon">
+                <svg viewBox="0 0 24 24"><path d="M12 3l9.5 8.5H19V21h-5v-6.5h-4V21H5v-9.5H2.5z"/></svg>
+              </div>
+              <h3>Home Visit Physiotherapy</h3>
+              <span class="info-badge">Now Available Across Coimbatore</span>
+              <p><b>Can't make it to the clinic?</b> Our therapists bring the same expert care to your doorstep - ideal for post-surgery recovery, elderly care and mobility-limited patients, anywhere within the Coimbatore circle.</p>
+            </div>
+
+            <div class="info-block">
+              <div class="info-block-icon">
+                <svg viewBox="0 0 24 24"><path d="M2 4h20v16H2V4zm2 2v.01L12 13l8-6.99V6H4zm16 12V8.5l-8 7-8-7V18h16z"/></svg>
+              </div>
+              <h3>General Enquiries</h3>
+              <p>For appointments, questions or feedback, feel free to reach out to us anytime.</p>
+              <div class="contact-icon-row">
+                <a href="mailto:Info.sjphysiotherapy@gmail.com" class="contact-icon-btn" aria-label="Email us">
+                  <svg viewBox="0 0 24 24"><path d="M2 4h20v16H2V4zm2 2v.01L12 13l8-6.99V6H4zm16 12V8.5l-8 7-8-7V18h16z"/></svg>
+                </a>
+                <a href="tel:+919629495946" class="contact-icon-btn" aria-label="Call us">
+                  <svg viewBox="0 0 24 24"><path d="M6.62 10.79a15.05 15.05 0 0 0 6.59 6.59l2.2-2.2a1 1 0 0 1 1.02-.24 11.36 11.36 0 0 0 3.57.57 1 1 0 0 1 1 1V20a1 1 0 0 1-1 1A17 17 0 0 1 3 4a1 1 0 0 1 1-1h3.5a1 1 0 0 1 1 1 11.36 11.36 0 0 0 .57 3.57 1 1 0 0 1-.25 1.02l-2.2 2.2z"/></svg>
+                </a>
+              </div>
+            </div>
+
+          </div>
+
+          <!-- RIGHT: Inquiry Form -->
+          <div class="form-card">
+            <div class="form-title">Send Us Your Inquiry</div>
+
+            <form id="contactForm" class="contact-form" novalidate>
+
+              <!-- Honeypot (bot trap, hidden from real users) -->
+              <input id="hp" name="hp" type="text" autocomplete="off" tabindex="-1" style="position:absolute; left:-9999px; opacity:0;">
+
+              <!-- Name -->
+              <div class="form-field">
+                <label for="name">Name <span class="required">*</span></label>
+                <input id="name" name="name" type="text" placeholder="Example: Geogre Williams" autocomplete="name" minlength="2" maxlength="60">
+                <div id="nameHelp" class="field-help">Use Letters And Spaces Only - 2 to 60 Characters</div>
+              </div>
+
+              <!-- Contact Number -->
+              <div class="form-field">
+                <label for="phone">Contact Number <span class="required">*</span></label>
+                <input id="phone" name="phone" type="tel" inputmode="numeric" placeholder="Example: 1234567890" autocomplete="tel" minlength="7" maxlength="15">
+                <div id="phoneHelp" class="field-help">Digits Only - 7 to 15 Digits</div>
+              </div>
+
+              <!-- Message -->
+              <div class="form-field">
+                <label for="message">Message / Inquiry / Request <span class="required">*</span></label>
+                <textarea id="message" name="message" placeholder="Enter your Message (or) Inquiry (or) Request (max 500 chars excluding spaces)"></textarea>
+                <div class="char-row">
+                  <div id="messageHelp" class="field-help"></div>
+                  <div class="char-counter" id="msgCounter">0 / 500</div>
+                </div>
+              </div>
+
+              <!-- Submit -->
+              <div class="form-actions">
+                <button type="submit" id="submitBtn" class="btn-submit"><span id="btnText">Submit</span></button>
+                <div id="formStatus" class="form-status"></div>
+                <div class="success-badge" id="successBadge" aria-hidden="true">
+                  <div class="success-check">
+                    <svg viewBox="0 0 24 24"><polyline points="4 12 9 17 20 6"></polyline></svg>
+                  </div>
+                  <span>Thank you!<br>Your message has been sent.</span>
+                </div>
+              </div>
+
+            </form>
+          </div>
+
+        </div>
       </div>
     </section>
   </main>
@@ -368,6 +542,198 @@ body.menu-open { overflow: hidden; height: 100vh; }
           body.classList.remove('menu-open'); // Unlocks body scroll
         });
       });
+    });
+  </script>
+
+  <!-- ── CONTACT FORM ── -->
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+
+      const form = document.getElementById('contactForm');
+      if (!form) return;
+
+      const nameInput    = document.getElementById('name');
+      const phoneInput   = document.getElementById('phone');
+      const messageInput = document.getElementById('message');
+      const msgCounter   = document.getElementById('msgCounter');
+      const submitBtn    = document.getElementById('submitBtn');
+      const btnText      = document.getElementById('btnText');
+      const formStatus   = document.getElementById('formStatus');
+      const hp           = document.getElementById('hp');
+      const successBadge = document.getElementById('successBadge');
+
+      const MSG_LIMIT = 500;                        // max message chars, excluding spaces
+      const nameRule  = /^[A-Za-z.\s]{2,60}$/;       // letters, spaces, dot only
+
+      /* TODO: paste your form backend / Google Apps Script URL here to receive submissions */
+      const WEBAPP_URL = 'https://script.google.com/macros/s/AKfycbxD0E4VhTGsxByFjnXfvhyswF-ppDrRoFIm1_q4gwV-q8of8pQlDkhKOFFcEptJRxVkKw/exec';
+
+      function countCharsWithoutSpaces(s) { return s.replace(/\s/g, '').length; }
+
+      /* Live validation — Name */
+      nameInput.addEventListener('input', function() {
+        const v = this.value.trim();
+        const help = document.getElementById('nameHelp');
+        if (v === '') {
+          this.classList.add('input-error');
+          help.textContent = 'Name is required.';
+          help.classList.add('error');
+        } else if (!nameRule.test(v)) {
+          this.classList.add('input-error');
+          help.textContent = 'Use letters and spaces only.';
+          help.classList.add('error');
+        } else {
+          this.classList.remove('input-error');
+          help.textContent = 'use letters and spaces only - 2 to 60 characters';
+          help.classList.remove('error');
+        }
+      });
+
+      /* Live validation — Contact Number (digits only) */
+      phoneInput.addEventListener('input', function() {
+        const onlyDigits = this.value.replace(/\D+/g, '');
+        if (this.value !== onlyDigits) this.value = onlyDigits;
+        const len = this.value.length;
+        const help = document.getElementById('phoneHelp');
+        if (len < 7 || len > 15) {
+          this.classList.add('input-error');
+          help.textContent = 'Contact must be 7 to 15 digits.';
+          help.classList.add('error');
+        } else {
+          this.classList.remove('input-error');
+          help.textContent = 'digits only - 7 to 15 digits';
+          help.classList.remove('error');
+        }
+      });
+
+      /* Live validation + counter — Message */
+      messageInput.addEventListener('input', function() {
+        const count = countCharsWithoutSpaces(this.value);
+        msgCounter.textContent = count + ' / ' + MSG_LIMIT;
+        const help = document.getElementById('messageHelp');
+        if (count === 0) {
+          this.classList.add('input-error');
+          help.textContent = 'You cannot submit without a message.';
+          help.classList.add('error');
+        } else if (count > MSG_LIMIT) {
+          this.classList.add('input-error');
+          help.textContent = 'Message exceeds ' + MSG_LIMIT + ' characters (excluding spaces).';
+          help.classList.add('error');
+        } else {
+          this.classList.remove('input-error');
+          help.textContent = '';
+          help.classList.remove('error');
+        }
+      });
+
+      function showSuccess() {
+        successBadge.classList.add('show');
+        successBadge.setAttribute('aria-hidden', 'false');
+        successBadge.scrollIntoView({ behavior: 'smooth', block: 'center' });
+        setTimeout(function() {
+          successBadge.classList.remove('show');
+          successBadge.setAttribute('aria-hidden', 'true');
+        }, 4000);
+      }
+
+      function resetForm() {
+        nameInput.value = '';
+        phoneInput.value = '';
+        messageInput.value = '';
+        msgCounter.textContent = '0 / ' + MSG_LIMIT;
+      }
+
+      form.addEventListener('submit', function(ev) {
+        ev.preventDefault();
+        formStatus.textContent = '';
+
+        let ok = true;
+        const nameVal    = nameInput.value.trim();
+        const phoneVal   = phoneInput.value.trim();
+        const messageVal = messageInput.value.trim();
+        const hpVal      = hp.value.trim();
+
+        /* Honeypot bot check */
+        if (hpVal !== '') {
+          formStatus.textContent = 'Thank you.';
+          return;
+        }
+
+        if (!nameVal || !nameRule.test(nameVal)) {
+          nameInput.classList.add('input-error');
+          document.getElementById('nameHelp').textContent = 'You cannot submit without a name';
+          document.getElementById('nameHelp').classList.add('error');
+          ok = false;
+        }
+        if (!phoneVal || phoneVal.length < 7 || phoneVal.length > 15) {
+          phoneInput.classList.add('input-error');
+          document.getElementById('phoneHelp').textContent = 'You cannot submit without a contact number';
+          document.getElementById('phoneHelp').classList.add('error');
+          ok = false;
+        }
+        const msgCount = countCharsWithoutSpaces(messageVal);
+        if (!messageVal || msgCount === 0) {
+          messageInput.classList.add('input-error');
+          document.getElementById('messageHelp').textContent = 'You Cannot Submit without a message';
+          document.getElementById('messageHelp').classList.add('error');
+          ok = false;
+        } else if (msgCount > MSG_LIMIT) {
+          messageInput.classList.add('input-error');
+          document.getElementById('messageHelp').textContent = 'Message exceeds ' + MSG_LIMIT + ' characters.';
+          document.getElementById('messageHelp').classList.add('error');
+          ok = false;
+        }
+
+        if (!ok) {
+          formStatus.textContent = 'Please fill out all fields correctly before submitting.';
+          formStatus.style.color = '#d64545';
+          return;
+        }
+
+        submitBtn.disabled = true;
+        btnText.innerHTML = '<span class="spinner" aria-hidden="true"></span> Sending...';
+        formStatus.textContent = '';
+
+        const payload = {
+          name: nameVal,
+          phone: phoneVal,
+          message: messageVal,
+          source: window.location.href,
+          hp: hpVal
+        };
+
+        function onSuccess() {
+          btnText.textContent = 'Submitted';
+          submitBtn.classList.add('btn-success');
+          formStatus.style.color = 'inherit';
+          resetForm();
+          showSuccess();
+          setTimeout(function() {
+            submitBtn.disabled = false;
+            btnText.textContent = 'Submit';
+            submitBtn.classList.remove('btn-success');
+          }, 1800);
+        }
+
+        if (WEBAPP_URL) {
+          /* mode:'no-cors' avoids CORS blocking; response is opaque, so completion = success */
+          fetch(WEBAPP_URL, {
+            method: 'POST',
+            mode: 'no-cors',
+            body: JSON.stringify(payload)
+          }).then(onSuccess).catch(function(err) {
+            submitBtn.disabled = false;
+            btnText.textContent = 'Submit';
+            formStatus.textContent = 'Could not send — please try again later.';
+            formStatus.style.color = '#d64545';
+            console.error('Submit error:', err);
+          });
+        } else {
+          /* No backend configured yet — confirm locally */
+          setTimeout(onSuccess, 900);
+        }
+      });
+
     });
   </script>
 
