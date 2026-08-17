@@ -6,7 +6,7 @@
 <title>Resources | SJ Physiotherapy</title>
 <meta name="title" content="Resources | SJ Physiotherapy">
 <meta name="description" content="Explore helpful physiotherapy resources, guides and articles from SJ Physiotherapy in Coimbatore to support your recovery and long-term wellness.">
-<meta name="keywords" content="SJ Physiotherapy resources, physiotherapy guides, recovery tips, exercise guides Coimbatore, physiotherapy articles">
+<meta name="keywords" content="SJ Physiotherapy resources, physiotherapy guides, recovery tips, exercise guides Coimbatore, physiotherapy articles, best physiotherapy in Coimbatore, best physiotherapist in Coimbatore ">
 <meta name="author" content="SJ Physiotherapy">
 <meta name="robots" content="index, follow">
 <meta name="language" content="English">
@@ -133,7 +133,69 @@ body.menu-open { overflow: hidden; height: 100vh; }
 }
 
 
+/* ============================================================
+     4. RESOURCES GRID & FILTERS
+============================================================ */
 
+.resources-section { padding: clamp(40px, 7vw, 70px) 0 clamp(50px, 8vw, 90px); width: 100%; }
+
+/* Filter Row */
+.filter-row { display: flex; align-items: center; justify-content: center; gap: 12px; margin-bottom: 36px; flex-wrap: wrap; width: 100%; }
+.filter-icon { display: inline-flex; align-items: center; color: #2778b7; flex-shrink: 0; }
+.filter-icon svg { display: block; }
+.chip { font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif; font-size: 15px; font-weight: 600; padding: 10px 22px; border-radius: 999px; background: #ffffff; border: 2px solid #e3edf5; color: #0e428c; cursor: pointer; transition: all .25s ease; white-space: nowrap; }
+.chip:hover { border-color: #a8d339; color: #2778b7; transform: translateY(-1px); }
+.chip.active { background: linear-gradient(135deg, #2778b7 0%, #a8d339 100%); color: #ffffff; border-color: transparent; box-shadow: 0 6px 16px rgba(39,120,183,.3); }
+
+/* Resource Card Grid */
+.grid { display: flex; flex-wrap: wrap; gap: 28px; align-items: stretch; justify-content: flex-start; width: 100%; }
+
+/* Resource Card */
+.resource-card { background: #ffffff; padding: 16px; border-radius: 14px; box-shadow: 0 6px 20px rgba(14,66,140,.1); border: 1px solid #eef3f8; display: flex; flex-direction: column; gap: 10px; flex: 1 1 calc((100% / 3) - 28px); min-width: 260px; max-width: calc((100% / 3) - 28px); cursor: pointer; text-decoration: none; color: inherit; transition: transform .25s ease, box-shadow .25s ease, border-color .25s ease; }
+.resource-card:hover { transform: translateY(-6px); box-shadow: 0 16px 32px rgba(39,120,183,.22); border-color: #a8d339; }
+
+/* Resource Thumbnail */
+.resource-thumb { width: 100%; aspect-ratio: 4 / 3; border-radius: 10px; background:#ffffff; border: 2px dashed #cfe0ee; display: flex; align-items: center; justify-content: center; overflow: hidden; }
+.resource-thumb img { width: 100%; height: 100%; object-fit: contain; display: block; }
+.resource-thumb .thumb-placeholder { display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 8px; color: #2778b7; opacity: .55; }
+.resource-thumb .thumb-placeholder span { font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif; font-size: 12px; font-weight: 600; letter-spacing: .3px; }
+
+/* Resource Info */
+.resource-category { font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif; font-size: 12px; font-weight: 700; color: #ffffff; background: #2778b7; text-align: left; text-transform: uppercase; letter-spacing: .8px; margin-top: 4px; display: inline-block; padding: 4px 10px; border-radius: 999px; align-self: flex-start; }
+.resource-title { font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif; font-weight: 700; font-size: 17px; color: #739126; text-align: left; line-height: 1.45; }
+
+/* No results state */
+.no-results { width: 100%; text-align: center; padding: 40px 20px; font-family: Georgia, 'Times New Roman', Times, serif; font-size: 16px; color: #6b6b6b; }
+
+
+@media (max-width: 900px)
+
+{
+
+.resources-section { padding: 32px 0 56px; }
+.filter-row { gap: 8px; margin-bottom: 28px; }
+.chip { font-size: 14px; padding: 9px 18px; }
+.grid { gap: 20px; }
+.resource-card { flex: 1 1 calc((100% / 2) - 20px); max-width: calc((100% / 2) - 20px); padding: 14px; }
+.resource-title { font-size: 16px; }
+
+}
+
+
+@media (max-width: 600px)
+
+{
+
+.resources-section { padding: 26px 0 44px; }
+.filter-row { gap: 6px; }
+.filter-icon { display: none; }
+.chip { font-size: 12px; padding: 7px 14px; }
+.grid { gap: 16px; }
+.resource-card { flex: 1 1 100%; max-width: 100%; min-width: 0; padding: 12px; border-radius: 12px; }
+.resource-title { font-size: 15px; }
+.resource-category { font-size: 11px; }
+
+}
 
 
 /* ============================================================
@@ -235,7 +297,7 @@ body.menu-open { overflow: hidden; height: 100vh; }
     <div class="container">
       <h1>Helpful Resources</h1>
       <p class="hero-content">
-        Guides, tips, and articles to support your recovery journey and help you stay informed about your physical wellness.
+        Guides, tips and articles to support your recovery journey and help you stay informed about your physical wellness.
       </p>
     </div>
   </section>
@@ -244,7 +306,21 @@ body.menu-open { overflow: hidden; height: 100vh; }
   <main>
     <section class="resources-section">
       <div class="container">
-        <!-- RESOURCES CONTENT GOES HERE -->
+
+        <!-- Filter Row -->
+        <div class="filter-row">
+          <div class="filter-icon" title="Filters">
+            <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 6h16M6 12h12M10 18h4"/></svg>
+          </div>
+          <div class="chip active" data-filter="all"><b>All</b></div>
+          <div class="chip" data-filter="Blog"><b>Blogs</b></div>
+          <div class="chip" data-filter="Article"><b>Articles</b></div>
+          <div class="chip" data-filter="Case Study"><b>Case Studies</b></div>
+        </div>
+
+        <!-- Resources Grid -->
+        <section class="grid" id="resourcesGrid" aria-label="Resource articles"></section>
+
       </div>
     </section>
   </main>
@@ -342,6 +418,125 @@ body.menu-open { overflow: hidden; height: 100vh; }
 <a href="https://wa.me/919629495946?text=Hello,%20I%20would%20like%20to%20book%20an%20appointment." class="float-wa" target="_blank" aria-label="Chat with us on WhatsApp">
     <img src="SOCIAL MEDIA/WA.png" alt="WhatsApp">
   </a>
+
+
+
+
+  <!-- ── RESOURCES GRID & FILTER LOGIC ── -->
+  <script>
+    // Resource entries - replace img/href with real assets and pages as content is published
+    const RESOURCES = [
+      // Blogs
+      { id: 1, title: 'Working 8+ Hours at a Desk? Follow These Exercises to Stay Away from Back Pain', category: 'Blog', img: 'https://SJ-Physiotherapy.github.io/Resource Images/Back-pain-cover.png', href: 'blog/follow-these-exercises-to-stay-away-from-back-pain-if-you-are-working-8-hours-at-a-desk.html' },
+      
+
+      // Articles
+      { id: 4, title: "Article of the Clinic", category: 'Article', img: '', href: '#' },
+
+
+      // Exercise Guides
+      { id: 7, title: 'Case Study of the Clinic', category: 'Case Study', img: '', href: '#' }
+    ];
+
+
+
+
+
+
+
+    const activeFilters = new Set(['all']);
+
+    // Render grid
+    function renderGrid(list) {
+      const grid = document.getElementById('resourcesGrid');
+      grid.innerHTML = '';
+
+      if (list.length === 0) {
+        const empty = document.createElement('div');
+        empty.className = 'no-results';
+        empty.textContent = 'No resources found in this category yet.';
+        grid.appendChild(empty);
+        return;
+      }
+
+      list.forEach(resource => {
+        const card = document.createElement('a');
+        card.className = 'resource-card';
+        card.href = resource.href;
+
+        const thumb = document.createElement('div');
+        thumb.className = 'resource-thumb';
+
+        if (resource.img) {
+          const img = document.createElement('img');
+          img.src = resource.img;
+          img.alt = resource.title;
+          thumb.appendChild(img);
+        } else {
+          const placeholder = document.createElement('div');
+          placeholder.className = 'thumb-placeholder';
+          placeholder.innerHTML = '<svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><path d="M21 15l-5-5L5 21"/></svg><span>Add Image</span>';
+          thumb.appendChild(placeholder);
+        }
+
+        const category = document.createElement('div');
+        category.className = 'resource-category';
+        category.textContent = resource.category;
+
+        const title = document.createElement('div');
+        title.className = 'resource-title';
+        title.textContent = resource.title;
+
+        card.appendChild(thumb);
+        card.appendChild(category);
+        card.appendChild(title);
+        grid.appendChild(card);
+      });
+    }
+
+    // Filter logic - multiple filters can be active except "all"
+    function getFilteredResources() {
+      if (activeFilters.has('all')) {
+        return RESOURCES;
+      }
+      return RESOURCES.filter(resource => activeFilters.has(resource.category));
+    }
+
+    // Handle filter chip clicks
+    document.querySelectorAll('.chip').forEach(chip => {
+      chip.addEventListener('click', () => {
+        const filter = chip.getAttribute('data-filter');
+
+        if (filter === 'all') {
+          activeFilters.clear();
+          activeFilters.add('all');
+          document.querySelectorAll('.chip').forEach(c => c.classList.remove('active'));
+          chip.classList.add('active');
+        } else {
+          activeFilters.delete('all');
+          document.querySelector('.chip[data-filter="all"]').classList.remove('active');
+
+          if (activeFilters.has(filter)) {
+            activeFilters.delete(filter);
+            chip.classList.remove('active');
+          } else {
+            activeFilters.add(filter);
+            chip.classList.add('active');
+          }
+
+          if (activeFilters.size === 0) {
+            activeFilters.add('all');
+            document.querySelector('.chip[data-filter="all"]').classList.add('active');
+          }
+        }
+
+        renderGrid(getFilteredResources());
+      });
+    });
+
+    // Initial render
+    renderGrid(RESOURCES);
+  </script>
 
   <!-- ── JAVASCRIPT ── -->
   <script>
