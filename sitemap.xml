@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset
+  xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
+        http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd"
+  xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
+
+  <url>
+    <loc>https://sj-physiotherapy.github.io/index.html</loc>
+    <lastmod>2026-09-13</lastmod>
+
+    <image:image>
+      <image:loc>https://sj-physiotherapy.github.io/LOGO/SJ-PHYSIOTHERAPY.png</image:loc>
+      <image:title>SJ Physiotherapy logo</image:title>
+      <image:caption>Official logo of SJ Physiotherapy, a physiotherapy clinic in Singanallur, Coimbatore</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://sj-physiotherapy.github.io/assets/hero-bg.jpg</image:loc>
+      <image:title>SJ Physiotherapy clinic banner</image:title>
+      <image:caption>Welcome banner for SJ Physiotherapy, offering orthopaedic rehab, sports injury recovery, manual therapy and women's health physiotherapy in Coimbatore</image:caption>
+    </image:image>
+  </url>
+
+  <url>
+    <loc>https://sj-physiotherapy.github.io/about-us.html</loc>
+    <lastmod>2026-09-13</lastmod>
+
+    <image:image>
+      <image:loc>https://sj-physiotherapy.github.io/TEAM/Surya.jpg</image:loc>
+      <image:title>Dr. Suriya, Sports Physiotherapist at SJ Physiotherapy</image:title>
+      <image:caption>Dr. Suriya, MPT in Sports Physiotherapy, consultant physiotherapist at SJ Physiotherapy, Coimbatore</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://sj-physiotherapy.github.io/TEAM/Jaycee.jpg</image:loc>
+      <image:title>Dr. Jaycee, Orthopaedic Physiotherapist at SJ Physiotherapy</image:title>
+      <image:caption>Dr. Jaycee, MPT in Orthopaedics, consultant physiotherapist and women's health physiotherapy practitioner at SJ Physiotherapy, Coimbatore</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://sj-physiotherapy.github.io/TEAM/Raj%20Vishnu%20Kumar.png</image:loc>
+      <image:title>Raj Vishnu Kumar, Web and Software Developer at SJ Physiotherapy</image:title>
+      <image:caption>Raj Vishnu Kumar, web and software developer and digital marketer for SJ Physiotherapy, Coimbatore</image:caption>
+    </image:image>
+  </url>
+
+  <url>
+    <loc>https://sj-physiotherapy.github.io/resources.html</loc>
+    <lastmod>2026-09-13</lastmod>
+  </url>
+
+  <url>
+    <loc>https://sj-physiotherapy.github.io/contact-us.html</loc>
+    <lastmod>2026-09-13</lastmod>
+  </url>
+
+  <url>
+    <loc>https://sj-physiotherapy.github.io/blog/follow-these-exercises-to-stay-away-from-back-pain-if-you-are-working-8-hours-at-a-desk.html</loc>
+    <lastmod>2026-09-13</lastmod>
+  </url>
+
+  <url>
+    <loc>https://sj-physiotherapy.github.io/blog/foods-and-exercises-to-avoid-muscle-tightening-and-stay-flexible.html</loc>
+    <lastmod>2026-09-13</lastmod>
+  </url>
+
+</urlset>
