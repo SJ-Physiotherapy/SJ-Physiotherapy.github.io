@@ -1,4 +1,0 @@
-User-agent: *
-Allow: /
-
-Sitemap: https://sj-physiotherapy.github.io/sitemap.xml
