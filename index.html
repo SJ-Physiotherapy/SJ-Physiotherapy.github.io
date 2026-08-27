@@ -291,6 +291,8 @@ body.menu-open { overflow: hidden; height: 100vh; }
 .condition-tabs { display: flex; flex-wrap: nowrap; justify-content: center; gap: 4px; margin-bottom: 40px; }
 .condition-tab {  background: #eef5fb; color: #0e428c; font-weight: 600; font-size: 15px; padding: 12px 22px; border-radius: 30px; border: 2px solid transparent; transition: all .3s ease; font-family: Georgia, 'Times New Roman', Times, serif; }
 .condition-tab:hover { border-color: #76b239; }
+.condition-tab-item { display: flex; flex-direction: column; align-items: stretch; gap: 6px; }
+.tab-cat-gif { width: 50px; height: 50px; aspect-ratio: 1 / 1; object-fit: contain; display: block; flex-shrink: 0; margin: 0 auto; }
 .condition-tab.active { font-family: Georgia, 'Times New Roman', Times, serif; background: linear-gradient(135deg, #2778b7 0%, #a8d339 100%); color: #ffffff; box-shadow: 0 4px 14px rgba(14,66,140,.25); }
 .condition-panel { display: none; }
 .condition-panel.active { display: block; animation: fadeInPanel .35s ease; }
@@ -318,7 +320,8 @@ body.menu-open { overflow: hidden; height: 100vh; }
 {
 
 .division-title { font-size: 21px; }
-.condition-tab { font-size: 10px; padding: 8px 1px; flex: 1 1 0; min-width: 0; text-align: center; line-height: 1.25; white-space: normal; word-break: normal; overflow-wrap: break-word; hyphens: auto; }
+.condition-tab { font-size: 10px; padding: 8px 1px; text-align: center; line-height: 1.25; white-space: normal; word-break: normal; overflow-wrap: break-word; hyphens: auto; }
+.condition-tab-item { flex: 1 1 0; min-width: 0; gap: 4px; }
 .condition-tabs { padding: 0 4px; margin-left: -8px; margin-right: -8px; width: calc(100% + 16px); }
 .accordion-header { font-size: 15px; padding: 15px 16px; }
 .accordion-body { padding: 0 16px; }
@@ -388,8 +391,6 @@ body.menu-open { overflow: hidden; height: 100vh; }
 
 
 .tabs-hint { font-weight: 600; text-align: center; font-size: 17px; color: #0e428c; margin-bottom: 6px; font-family: Georgia, 'Times New Roman', Times, serif; }
-.tabs-arrow { text-align: center; font-size: 26px; line-height: 1;  color: #76b239; margin-bottom: 16px; animation: tabsArrowBounce 1.4s ease-in-out infinite; }
-@keyframes tabsArrowBounce { 0%, 100% { transform: translateY(0); } 50% { transform: translateY(6px); } }
 
 
 
@@ -399,8 +400,15 @@ body.menu-open { overflow: hidden; height: 100vh; }
 {
 
 .tabs-hint { font-size: 15px; }
-.tabs-arrow { font-size: 22px; margin-bottom: 12px; }
 
+}
+
+
+@media (max-width: 900px)
+
+{
+
+.condition-tab-item { gap: 5px; }
 
 }
 
@@ -487,14 +495,25 @@ body.intro-locked { overflow: hidden; height: 100vh; }
 
 
       <p class="tabs-hint">Browse Our Treatment Categories Below To Find The Right Physiotherapy Care For Your Condition.</p>
-      <div class="tabs-arrow"> ↓ ↓ ↓ ↓ </div>
 
 
         <div class="condition-tabs" role="tablist" aria-label="Condition categories">
-          <button class="condition-tab active" type="button" data-target="tab-ortho" role="tab" aria-selected="true">Orthopaedic Conditions</button>
-          <button class="condition-tab" type="button" data-target="tab-sports" role="tab" aria-selected="false">Sports Rehabilitation</button>
-          <button class="condition-tab" type="button" data-target="tab-geriatric" role="tab" aria-selected="false">Geriatric Physiotherapy</button>
-          <button class="condition-tab" type="button" data-target="tab-womens" role="tab" aria-selected="false">Women’s Health</button>
+          <div class="condition-tab-item">
+            <img class="tab-cat-gif" src="LOGO/Arrow%20Gif.gif" alt="">
+            <button class="condition-tab active" type="button" data-target="tab-ortho" role="tab" aria-selected="true">Orthopaedic Conditions</button>
+          </div>
+          <div class="condition-tab-item">
+            <img class="tab-cat-gif" src="LOGO/Arrow%20Gif.gif" alt="">
+            <button class="condition-tab" type="button" data-target="tab-sports" role="tab" aria-selected="false">Sports Rehabilitation</button>
+          </div>
+          <div class="condition-tab-item">
+            <img class="tab-cat-gif" src="LOGO/Arrow%20Gif.gif" alt="">
+            <button class="condition-tab" type="button" data-target="tab-geriatric" role="tab" aria-selected="false">Geriatric Physiotherapy</button>
+          </div>
+          <div class="condition-tab-item">
+            <img class="tab-cat-gif" src="LOGO/Arrow%20Gif.gif" alt="">
+            <button class="condition-tab" type="button" data-target="tab-womens" role="tab" aria-selected="false">Women’s Health</button>
+          </div>
         </div>
 
         <div class="condition-panel active" id="tab-ortho" role="tabpanel">
