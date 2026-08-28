@@ -7,7 +7,7 @@
   xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
 
   <url>
-    <loc>https://sj-physiotherapy.github.io/index.html</loc>
+    <loc>https://sj-physiotherapy.github.io/</loc>
     <lastmod>2026-09-13</lastmod>
 
     <image:image>
@@ -23,7 +23,7 @@
   </url>
 
   <url>
-    <loc>https://sj-physiotherapy.github.io/about-us.html</loc>
+    <loc>https://sj-physiotherapy.github.io/about-us/</loc>
     <lastmod>2026-09-13</lastmod>
 
     <image:image>
@@ -44,23 +44,23 @@
   </url>
 
   <url>
-    <loc>https://sj-physiotherapy.github.io/resources.html</loc>
+    <loc>https://sj-physiotherapy.github.io/resources/</loc>
     <lastmod>2026-09-13</lastmod>
   </url>
 
   <url>
-    <loc>https://sj-physiotherapy.github.io/contact-us.html</loc>
+    <loc>https://sj-physiotherapy.github.io/contact-us/</loc>
     <lastmod>2026-09-13</lastmod>
   </url>
 
 
 <url>
-    <loc>https://sj-physiotherapy.github.io/privacy-policy.html</loc>
+    <loc>https://sj-physiotherapy.github.io/privacy-policy/</loc>
     <lastmod>2026-09-13</lastmod>
   </url>
 
   <url>
-    <loc>https://sj-physiotherapy.github.io/terms-and-conditions.html</loc>
+    <loc>https://sj-physiotherapy.github.io/terms-and-conditions/</loc>
     <lastmod>2026-09-13</lastmod>
   </url>
 
