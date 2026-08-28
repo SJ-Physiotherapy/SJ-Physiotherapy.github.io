@@ -1,4 +1,4 @@
-# SJ-Physiotherapy.github.io - SJ Physiotherapy Clinic's Official Website
+# sjphysiotherapy.in - SJ Physiotherapy Clinic's Official Website
 
 SJ Physiotherapy offers specialized treatments for below mentioned medical conditions in Coimbatore including:
 * **Orthopedic Rehabilitation** - Neck Pain, Low Back Pain, Sciatica, Spondylosis, Frozen Shoulder, Shoulder Impingement, Rotator Cuff Injury, Tennis Elbow, Golfer's Elbow, Wrist Pain, Hip Pain, Knee Pain, Heel Pain, Plantar Fasciitis, Osteoarthritis, Rheumatoid Arthritis and Post-Surgical Rehabilitation.
