@@ -32,8 +32,10 @@
 {
   "@context": "https://schema.org",
   "@type": "MedicalClinic",
+  "@id": "https://sj-physiotherapy.github.io/#clinic",
   "name": "SJ Physiotherapy",
   "image": "https://sj-physiotherapy.github.io/LOGO/SJ-PHYSIOTHERAPY.png",
+  "logo": "https://sj-physiotherapy.github.io/LOGO/SJ-PHYSIOTHERAPY.png",
   "description": "Professional Physiotherapy Clinic in Singanallur, Coimbatore offering orthopaedic rehab, sports injury recovery and women's health services.",
   "address": {
     "@type": "PostalAddress",
@@ -43,11 +45,74 @@
     "postalCode": "641005",
     "addressCountry": "IN"
   },
-  "telephone": "+91-9629495946",
-  "email": "Info.sjphysiotherapy@gmail.com",
-  "url": "https://sj-physiotherapy.github.io"
+  "geo": {
+  "@type": "GeoCoordinates",
+  "latitude": "11.0012",
+  "longitude": "77.0326"
+},
+  "telephone": "+919629495946",
+  "email": "info.sjphysiotherapy@gmail.com",
+  "url": "https://sj-physiotherapy.github.io/",
+  "priceRange": "₹₹",
+  "medicalSpecialty": ["Physiotherapy", "Orthopedic", "Musculoskeletal", "Geriatric Physiotherapy", "Sports Rehabilitation", "Women’s Health"],
+  "areaServed": {
+    "@type": "City",
+    "name": "Coimbatore"
+  },
+  "openingHoursSpecification": [
+    {
+      "@type": "OpeningHoursSpecification",
+      "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"],
+      "opens": "09:00",
+      "closes": "20:00"
+    }
+  ],
+  "sameAs": [
+    "https://www.linkedin.com/company/sj-physiotherapy/",
+    "https://www.instagram.com/sjphysiotherapy_/",
+    "https://www.facebook.com/profile.php?id=61593791160195",
+    "https://www.youtube.com/@SJ-Physiotherapy"
+  ]
 }
 </script>
+
+
+
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "ContactPage",
+  "@id": "https://sj-physiotherapy.github.io/contact-us/",
+  "url": "https://sj-physiotherapy.github.io/contact-us/",
+  "name": "Contact Us | SJ Physiotherapy",
+  "description": "Get in touch with SJ Physiotherapy in Singanallur, Coimbatore. Book an appointment, ask a question or find our clinic location and contact details.",
+  "inLanguage": "en",
+  "isPartOf": {
+    "@type": "WebSite",
+    "name": "SJ Physiotherapy",
+    "url": "https://sj-physiotherapy.github.io/"
+  },
+  "about": {
+    "@id": "https://sj-physiotherapy.github.io/#clinic"
+  },
+  "mainEntity": {
+    "@id": "https://sj-physiotherapy.github.io/#clinic",
+    "@type": "MedicalClinic",
+    "name": "SJ Physiotherapy",
+    "contactPoint": {
+      "@type": "ContactPoint",
+      "contactType": "customer service",
+      "telephone": "+919629495946",
+      "email": "info.sjphysiotherapy@gmail.com",
+      "areaServed": "IN",
+      "availableLanguage": ["English", "Tamil"]
+    }
+  }
+}
+</script>
+
+
 
 
 
