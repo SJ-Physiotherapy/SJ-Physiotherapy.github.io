@@ -49,6 +49,11 @@
   </url>
 
   <url>
+    <loc>https://sjphysiotherapy.in/gallery/</loc>
+    <lastmod>2026-10-25</lastmod>
+  </url>
+
+  <url>
     <loc>https://sjphysiotherapy.in/contact-us/</loc>
     <lastmod>2026-09-07</lastmod>
   </url>
@@ -74,5 +79,8 @@
     <loc>https://sjphysiotherapy.in/blog/foods-and-exercises-to-avoid-muscle-tightening-and-stay-flexible.html</loc>
     <lastmod>2026-09-07</lastmod>
   </url>
+
+  <!-- RESOURCES:START (resource posts – maintained automatically by the website admin) -->
+  <!-- RESOURCES:END -->
 
 </urlset>

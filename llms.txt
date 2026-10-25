@@ -14,6 +14,7 @@ SJ Physiotherapy was founded by Dr. Suriya (MPT, Sports Physiotherapy) and Dr. J
 
 - [About Us | SJ Physiotherapy](https://sjphysiotherapy.in/about-us/): Clinic story, mission, vision and core values (compassion, integrity, evidence-based practice); team profiles for founder Dr. Suriya, MPT (Sports Physiotherapy - dry needling, cupping, IASTM, kinesiotaping, biomechanical correction certified) and co-founder Dr. Jaycee, MPT (Orthopaedics, certified Women's Health Physiotherapy Practitioner). Also credits Raj Vishnu Kumar, a non-clinical team member (Web & Software Developer, Digital Marketer) who is not a physiotherapist or medical professional and does not provide patient treatment; he develops and maintains the clinic's website and patient record/billing software and manages its digital marketing and SEO.
 - [Resources | SJ Physiotherapy](https://sjphysiotherapy.in/resources/): Blog posts, articles and case studies on recovery, exercise guidance and physical wellness, updated periodically.
+- [Gallery | SJ Physiotherapy](https://sjphysiotherapy.in/gallery/): Photos of the clinic in Singanallur, treatment sessions, the team and community events such as posture and health camps.
 - [Contact Us | SJ Physiotherapy](https://sjphysiotherapy.in/contact-us/): Clinic address, phone, WhatsApp and email; enquiry form; details on home-visit physiotherapy available across Coimbatore.
 
 ## Legal
