@@ -76,7 +76,34 @@
 }
 </script>
 
-
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "ImageGallery",
+  "@id": "https://sjphysiotherapy.in/gallery/#gallery",
+  "name": "Gallery - SJ Physiotherapy",
+  "url": "https://sjphysiotherapy.in/gallery/",
+  "publisher": {
+    "@id": "https://sjphysiotherapy.in/#clinic"
+  },
+  "image": [
+    {
+      "@type": "ImageObject",
+      "contentUrl": "https://sjphysiotherapy.in/gallery/images/112ed7fddf/photo-mvp7sfxs14j-0.jpg",
+      "name": "Interior - photo 1",
+      "caption": "Interior - photo 1",
+      "about": "Interior"
+    },
+    {
+      "@type": "ImageObject",
+      "contentUrl": "https://sjphysiotherapy.in/gallery/images/112ed7fddf/photo-mvp7sfxsyo3-1.jpg",
+      "name": "Interior - photo 2",
+      "caption": "Interior - photo 2",
+      "about": "Interior"
+    }
+  ]
+}
+</script>
 
 
 <!-- Google tag (gtag.js) -->
@@ -380,7 +407,13 @@ body.no-scroll { overflow: hidden; }
   <!-- ── MAIN PAGE CONTENT ── -->
   <main class="gallery-section">
     <div class="container">
-      <p class="gallery-empty">Photos will be added soon.</p>
+      <section class="gallery-group" id="g-interior" aria-labelledby="g-interior-h">
+        <div class="gallery-head"><h2 id="g-interior-h">Interior</h2></div>
+        <div class="gallery-grid" data-viewer>
+          <figure class="gallery-item"><button type="button" data-photo data-caption="Interior - photo 1" aria-label="Open photo: Interior - photo 1"><img draggable="false" src="https://sjphysiotherapy.in/gallery/images/112ed7fddf/photo-mvp7sfxs14j-0.jpg" alt="Interior - photo 1" width="721" height="1600" loading="lazy"></button></figure>
+          <figure class="gallery-item"><button type="button" data-photo data-caption="Interior - photo 2" aria-label="Open photo: Interior - photo 2"><img draggable="false" src="https://sjphysiotherapy.in/gallery/images/112ed7fddf/photo-mvp7sfxsyo3-1.jpg" alt="Interior - photo 2" width="721" height="1600" loading="lazy"></button></figure>
+        </div>
+      </section>
     </div>
   </main>
 
