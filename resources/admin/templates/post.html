@@ -20,7 +20,7 @@
 <meta property="og:description" content="{{OG_DESCRIPTION}}">
 <meta property="og:image" content="{{OG_IMAGE}}">
 <meta property="og:image:type" content="{{OG_IMAGE_TYPE}}">
-<meta property="og:image:width" content="1080">
+<meta property="og:image:width" content="1920">
 <meta property="og:image:height" content="1080">
 <meta property="og:image:alt" content="{{OG_IMAGE_ALT}}">
 <meta property="og:site_name" content="SJ Physiotherapy">
@@ -199,9 +199,11 @@ body.menu-open { overflow: hidden; height: 100vh; }
 .article-meta { font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif; font-size: 14px; color: #6b6b6b; display: flex; align-items: center; justify-content: center; gap: 10px; flex-wrap: wrap; }
 .article-meta .dot { width: 4px; height: 4px; border-radius: 50%; background: #a8d339; }
 
-/* Cover - square, like the other blog posts */
-.article-image { width: 100%; max-width: 550px; aspect-ratio: 1 / 1; margin: 0 auto 44px; border-radius: 16px; background: #ffffff; border: 2px dashed #cfe0ee; overflow: hidden; }
-.article-image img { width: 100%; height: 100%; object-fit: cover; object-position: top; display: block; }
+/* Cover - rectangle, shown first (above the title), full image with no cropping. Width: 75% computer, 80% tablet, 90% mobile */
+.blog-article .container, .article-body { display: flex; flex-direction: column; }
+.back-link { order: -2; align-self: flex-start; }
+.article-image { order: -1; width: 75%; max-width: none; margin: 0 auto 36px; background: transparent; border: 0; border-radius: 0; overflow: visible; }
+.article-image img { width: 100%; height: auto; max-width: 100%; display: block; border-radius: 0; }
 
 /* Contents list */
 .post-toc { background: #f4f8fb; border: 1px solid #e3edf5; border-left: 4px solid #a8d339; border-radius: 0 14px 14px 0; padding: 20px 24px; margin: 0 0 40px; font-family: Georgia, 'Times New Roman', Times, serif; }
@@ -373,7 +375,7 @@ body.menu-open { overflow: hidden; height: 100vh; }
 
 .blog-article { padding: 32px 0 60px; }
 .article-header { margin-bottom: 30px; }
-.article-image { margin-bottom: 36px; max-width: 350px; }
+.article-image { margin-bottom: 36px; width: 80%; max-width: none; }
 .pb-card-grid, .pb-cards.cols-4 .pb-card-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
 .pb-gallery.cols-4 .pb-grid { grid-template-columns: repeat(3, minmax(0, 1fr)); }
 .pb-cta { padding: 36px 22px; }
@@ -399,7 +401,7 @@ body.menu-open { overflow: hidden; height: 100vh; }
 .back-link { font-size: 13px; margin-bottom: 24px; }
 .article-badge { font-size: 11px; padding: 5px 14px; margin-bottom: 16px; }
 .article-meta { font-size: 12.5px; gap: 8px; }
-.article-image { border-radius: 12px; margin-bottom: 30px; max-width: 300px; }
+.article-image { border-radius: 12px; margin-bottom: 30px; width: 90%; max-width: none; }
 .post-content { font-size: 15px; }
 .post-content blockquote { font-size: 16px; padding-left: 16px; }
 .pb-card-grid, .pb-cards.cols-2 .pb-card-grid, .pb-cards.cols-4 .pb-card-grid { grid-template-columns: 1fr; }
@@ -601,13 +603,6 @@ body.no-scroll { overflow: hidden; }
 
     </div>
   </header>
-
-  <!-- ── HERO / PAGE TITLE ── -->
-  <section class="hero">
-    <div class="container">
-      <p class="hero-title">{{HERO_TITLE}}</p>
-    </div>
-  </section>
 
   <!-- ── MAIN PAGE CONTENT ── -->
   <main class="blog-article">
