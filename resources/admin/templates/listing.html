@@ -239,7 +239,8 @@ body.menu-open { overflow: hidden; height: 100vh; }
 .resource-card[hidden] { display: none; }
 
 /* Resource Thumbnail */
-.resource-thumb { width: 100%; aspect-ratio: 4 / 3; border-radius: 10px; background:#ffffff; border: 2px dashed #cfe0ee; display: flex; align-items: center; justify-content: center; overflow: hidden; }
+/* Rectangle (16:9) cover, full image shown with no cropping (older square covers are centred inside it) */
+.resource-thumb { width: 100%; aspect-ratio: 16 / 9; border-radius: 10px; background: #f4f8fb; display: flex; align-items: center; justify-content: center; overflow: hidden; }
 .resource-thumb img { width: 100%; height: 100%; object-fit: contain; display: block; }
 
 /* Resource Info */
