@@ -111,7 +111,7 @@ textarea.inp { min-height: 90px; resize: vertical; }
   .layout-pick { grid-template-columns: repeat(2, 1fr); }
 }
 .cover-box { border: 2px dashed #cfe0ee; border-radius: 12px; padding: 14px; text-align: center; background: #fbfdff; }
-.cover-box img { width: 100%; max-width: 320px; margin-left: auto; margin-right: auto; aspect-ratio: 1 / 1; object-fit: cover; border-radius: 8px; margin-bottom: 10px; }
+.cover-box img { width: 100%; max-width: 320px; margin-left: auto; margin-right: auto; aspect-ratio: 16 / 9; object-fit: contain; border-radius: 8px; margin-bottom: 10px; }
 .rte-toolbar { display: flex; flex-wrap: wrap; gap: 4px; padding: 8px; border: 1.5px solid #dfe3e8; border-bottom: 0; border-radius: 10px 10px 0 0; background: #fafafa; position: sticky; top: 70px; z-index: 5; }
 .rte-toolbar button, .rte-toolbar select { min-width: 36px; height: 36px; padding: 0 8px; border: 1px solid #ddd; border-radius: 6px; background: #fff; font-size: 14px; font-weight: 700; color: var(--dark); cursor: pointer; }
 .rte-toolbar button:hover, .rte-toolbar select:hover { border-color: var(--red); color: var(--primary); }
@@ -378,7 +378,7 @@ textarea.inp { min-height: 90px; resize: vertical; }
               <h2>Cover Image</h2>
               <div class="cover-box">
                 <img draggable="false" id="coverPreview" src="" alt="" hidden>
-                <p class="hint" id="coverHint">The cover must be exactly <strong>1080 × 1080 px</strong> (square), <strong>1 MB or smaller</strong> and a JPG, PNG or WebP file. It is also used when the post is shared on WhatsApp or Facebook.</p>
+                <p class="hint" id="coverHint">The cover must be exactly <strong>1920 × 1080 px</strong> (rectangle, 16:9), <strong>1 MB or smaller</strong> and a JPG, PNG or WebP file. It is also used when the post is shared on WhatsApp or Facebook.</p>
                 <div class="msg" id="coverMsg"></div>
                 <label class="b light" for="coverFile" style="margin-top:8px">Choose cover image</label>
                 <input type="file" id="coverFile" accept="image/jpeg,image/png,image/webp" hidden>
@@ -1485,14 +1485,14 @@ textarea.inp { min-height: 90px; resize: vertical; }
     var EXT = { 'image/jpeg': 'jpg', 'image/png': 'png', 'image/webp': 'webp' };
     function stamp() { return Date.now().toString(36) + Math.random().toString(36).slice(2, 5); }
 
-    /* Strict cover check: exactly 1080 × 1080 px (square), 1 MB or less, JPG / PNG / WebP. No automatic fixing. */
+    /* Strict cover check: exactly 1920 × 1080 px (rectangle, 16:9), 1 MB or less, JPG / PNG / WebP. No automatic fixing. */
     function checkCover(file) {
       if (!EXT[file.type]) return Promise.reject(new Error('This file is a ' + (file.type || 'unknown type') + '. Please upload a JPG, PNG or WebP image.'));
       if (file.size > MAX_BYTES) return Promise.reject(new Error('This image is ' + mb(file.size) + '. Please upload a cover of 1 MB or less.'));
       return readFile(file).then(function (data) {
         return loadImage(data).then(function (img) {
-          if (img.naturalWidth !== 1080 || img.naturalHeight !== 1080) {
-            throw new Error('This image is ' + img.naturalWidth + ' × ' + img.naturalHeight + ' px. Please upload a cover that is exactly 1080 × 1080 px.');
+          if (img.naturalWidth !== 1920 || img.naturalHeight !== 1080) {
+            throw new Error('This image is ' + img.naturalWidth + ' × ' + img.naturalHeight + ' px. Please upload a cover that is exactly 1920 × 1080 px.');
           }
           return data;
         });
